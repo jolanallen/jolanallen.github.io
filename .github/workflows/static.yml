@@ -1,43 +1,38 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["main"]  # Exécute le workflow lorsqu'un push est effectué sur la branche 'main'
+  workflow_dispatch:  # Permet également d'exécuter ce workflow manuellement depuis l'onglet Actions
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read  # Permet à GitHub Actions de lire le contenu du dépôt
+  pages: write    # Permet de déployer sur GitHub Pages
+  id-token: write # Nécessaire pour l'authentification avec GitHub Pages
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages"  # Groupe d'exécution pour que seul un déploiement soit en cours à la fois
+  cancel-in-progress: false  # N'annule pas les déploiements en cours si un nouveau déploiement est en attente
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      name: github-pages  # Le nom de l'environnement GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }}  # L'URL de la page déployée
+    runs-on: ubuntu-latest  # Utilise un environnement Ubuntu pour exécuter les actions
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Récupère le code source du dépôt
+      
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5  # Prépare l'environnement pour GitHub Pages
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3  # Télécharge les fichiers pour le déploiement
         with:
-          # Upload entire repository
-          path: '.'
+          path: '.'  # Télécharge tout le dépôt, en incluant tous les fichiers (HTML, CSS, JS, etc.)
+      
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4  # Déploie les fichiers sur GitHub Pages
+
