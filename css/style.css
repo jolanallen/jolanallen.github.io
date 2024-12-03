@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    padding-left: 250px; /* Pour laisser de l'espace pour la navbar */
+    padding-left: 180px; /* Pour laisser de l'espace pour la navbar */
 }
 
 /* Container de la navbar fixée à gauche */
@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Largeur de la navbar */
+    width: 180px; /* Largeur de la navbar */
     height: 100%; /* Prendre toute la hauteur */
     background-image: url("/image/nav.png");
     background-repeat: no-repeat;
