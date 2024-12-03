@@ -25,7 +25,7 @@ body {
     left: 0;
     width: 250px; /* Largeur de la navbar */
     height: 100%; /* Prendre toute la hauteur */
-    background-image: url("/css/image/nav.png");
+    background-image: url("/image/nav.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 50px; /* Pour un peu d'espace au-dessus */
@@ -71,7 +71,7 @@ body {
     color: white;
     text-align: center;
     padding: 90px 0;
-    background-image: url("/css/image/header.png");
+    background-image: url("/image/header.png");
     background-repeat: no-repeat;
     background-size: cover;
 
