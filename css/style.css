@@ -1,0 +1,165 @@
+/* Reset de marges et padding pour que tout soit uniformisé */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond et police générale */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-left: 250px; /* Pour laisser de l'espace pour la navbar */
+}
+
+/* Container de la navbar fixée à gauche */
+.navbar-container {
+    position: relative;
+}
+
+/* Positionnement de la navbar à gauche, hauteur complète */
+.navbar-fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largeur de la navbar */
+    height: 100%; /* Prendre toute la hauteur */
+    background-image: url("/css/image/nav.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px; /* Pour un peu d'espace au-dessus */
+    color: #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Photo de profil */
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+/* Style de la navbar verticale */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.navbar-item {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-item:hover {
+    background-color: #001d7e;
+}
+.section-home {
+    color: white;
+    text-align: center;
+    padding: 90px 0;
+    background-image: url("/css/image/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Section "À propos" */
+.section-about {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-about h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-about p {
+    color: #555;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section Projets */
+.section-projects {
+    background-color: #c2c3fc;
+    padding: 150px 0;
+    text-align: center;
+    height: 1000px;
+}
+
+.section-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Cartes de projets */
+.card {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    border-radius: 10px;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #555;
+}
+
+.card .btn-primary {
+    background-color: #333;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background-color: #555;
+}
+
+/* Formulaire de contact */
+.section-contact form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.section-contact form .btn-primary {
+    background-color: #333;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.section-contact form .btn-primary:hover {
+    background-color: #555;
+}
