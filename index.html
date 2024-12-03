@@ -35,15 +35,6 @@
         </div>
     </section>
    
-    <section id="about" class="section-about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Je suis un développeur passionné par le design et la création web. J'aime travailler sur des projets innovants et apprendre de nouvelles technologies.</p>
-        </div>
-    </section>
-   
-
-    <!-- Section Projets -->
     <section id="projects" class="section-projects">
         <div class="container">
             <h2>Mes Projets</h2>
@@ -55,7 +46,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Projet 1</h5>
                             <p class="card-text">Une description brève du projet. Il peut s'agir d'une application ou d'un site web.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Voir le projet</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal" onclick="loadProjectContent('project/projet1.md')">Voir le projet</button>
                         </div>
                     </div>
                 </div>
@@ -67,9 +58,8 @@
                                 <h5 class="modal-title" id="project1ModalLabel">Projet 1 - Détails</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <p>Description détaillée du projet 1. Ce projet a été réalisé avec des technologies comme HTML, CSS, JavaScript...</p>
-                                <img src="projet1-detail.jpg" class="img-fluid" alt="Détails du Projet 1">
+                            <div class="modal-body" id="projectContent">
+                                <!-- Contenu dynamique du projet sera inséré ici -->
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -85,7 +75,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Projet 2</h5>
                             <p class="card-text">Une autre description de projet, avec une brève présentation des fonctionnalités.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Voir le projet</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal" onclick="loadProjectContent('project/projet1.md')">Voir le projet</button>
                         </div>
                     </div>
                 </div>
@@ -97,37 +87,8 @@
                                 <h5 class="modal-title" id="project2ModalLabel">Projet 2 - Détails</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <p>Description détaillée du projet 2. Ce projet utilise des frameworks comme React.js et Node.js...</p>
-                                <img src="projet2-detail.jpg" class="img-fluid" alt="Détails du Projet 2">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="projet2.jpg" class="card-img-top" alt="Projet 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Projet 3</h5>
-                            <p class="card-text">Une autre description de projet, avec une brève présentation des fonctionnalités.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Voir le projet</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal Projet 3 -->
-                <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="project2ModalLabel">Projet 2 - Détails</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Description détaillée du projet 2. Ce projet utilise des frameworks comme React.js et Node.js...</p>
-                                <img src="projet2-detail.jpg" class="img-fluid" alt="Détails du Projet 2">
+                            <div class="modal-body" id="projectContent">
+                                <!-- Contenu dynamique du projet sera inséré ici -->
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -138,18 +99,9 @@
             </div>
         </div>
     </section>
-    <section id="Disclamer" class="section-about">
-        <div class="container">
-            <h2>Disclamer</h2>
-            <p>Ce disclaimer (Avis de non-responsabilité) s’applique à l’ensemble du contenu de ce site, y compris toutes les pages, articles, et autres publications de l’auteur.
-
-                En accédant à ce site et en utilisant ses ressources, vous reconnaissez et acceptez que :
-                
-                Les informations fournies sur ce site sont destinées uniquement à des fins éducatives et informatives. En aucun cas, ce site n’encourage ou ne tolère des actions illégales. Vous êtes entièrement responsables de vos actions et des conséquences qui en découlent. L’auteur et l’hébergeur du site déclinent toute responsabilité quant à l’utilisation que vous faites des informations disponibles ici. Aucune demande visant à enfreindre la loi ne sera prise en compte.</p>
-        </div>
-    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script> <!-- Lien vers le fichier JavaScript externe -->
 </body>
 
 </html>
