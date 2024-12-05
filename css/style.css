@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 180px; /* Largeur de la navbar */
+    width: 250px; /* Largeur de la navbar */
     height: 100%; /* Prendre toute la hauteur */
     background-image: url("/image/nav.png");
     background-repeat: no-repeat;
