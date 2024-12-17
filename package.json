@@ -1,0 +1,15 @@
+{
+  "name": "jolanallen.github.io",
+  "version": "1.0.0",
+  "description": "porte folio de jolan allen ",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \"Erreur : pas de test spécifier \" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jolanallen/jolanallen.github.io.git"
+  },
+  "author": "jolan allen",
+  "license": "ISC"
+}
