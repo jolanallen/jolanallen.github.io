@@ -1,0 +1,69 @@
+html {
+    text-align: center;
+    font-family: system-ui, sans-serif;
+}
+
+
+
+#navbarText {
+    background-color: rgb(148, 149, 155);
+    text-align: center;
+}
+header {
+    background-color: rgb(148, 149, 155);
+}
+#Profile {
+    text-align: center;
+    margin-right: 95px;
+    height: 80px;
+    width: 80px;
+    left: 6px;
+    position: relative;
+    
+}
+
+.container {
+    text-align: center;
+}
+
+.content-section {
+    background-color: rgb(148, 149, 155);
+    display: flex;
+}
+
+
+section {
+    height: auto;
+    overflow: hidden;
+}
+
+.hamburger-icon {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px; 
+    height: 20px; 
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 4px; /* épaisseur des barres */
+    background-color: #000; /* couleur des barres */
+}
+
+
+
+#Copyright, .footer {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
