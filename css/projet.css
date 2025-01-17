@@ -1,0 +1,13 @@
+
+
+
+.modal-dialog {
+    max-width: 80%; /* Augmente la largeur à 80% de la fenêtre */
+    margin: 1.75rem auto; /* Pourcentages pour l'alignement */
+}
+
+/* Ajuster la hauteur du modal */
+.modal-content {
+    min-height: 700px; /* Augmente la hauteur minimale */
+
+}

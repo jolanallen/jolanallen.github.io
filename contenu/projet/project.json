@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Projet 1",
+        "year": "2025",
+        "description": "Description courte du Projet 1.",
+        "details": "Détails complets du Projet 1.",
+        "pdfLink": "/contenu/projet/compte_rendu_projet-cloud_allen_jolan.pdf"
+    },
+    {
+        "id": 2,
+        "title": "Projet 2",
+        "year": "2024",
+        "description": "Description courte du Projet 2.",
+        "details": "Détails complets du Projet 2.",
+        "pdfLink": "/path/to/projet2-livrable.pdf"
+    }
+]
