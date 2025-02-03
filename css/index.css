@@ -1,8 +1,9 @@
 html, body {
     text-align: center;
     font-family: system-ui, sans-serif;
-    background-color: rgba(80, 79, 79, 0.568);
     color: white;
+    background-color: rgb(54, 52, 52);
+   
     height: 100%;
 }
 
@@ -26,7 +27,10 @@ html, body {
 .navbar-nav {
     --bs-nav-link-hover-color: rgb(0, 225, 255);
 }
-
+.card {
+    background-color: #1f1f1f;
+    color: white;
+}
 
 
 header {

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const boutonCV = document.getElementById('boutoncv');
+    const boutonCV = document.getElementById('boutonCV');
     const pdfContainer = document.getElementById('pdfContainer'); 
 
     const pdfJsLibUrl = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js";
