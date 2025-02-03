@@ -1,25 +1,30 @@
 html, body {
     text-align: center;
     font-family: system-ui, sans-serif;
-    color: rgb(255, 255, 255);
+    background-color: rgba(80, 79, 79, 0.568);
+    color: white;
     height: 100%;
 }
 
-.navbar-brand {
-    color: red;
-    text-align: center;
-    justify-content: center;
+.nav-brand {
+    color: #006eff;
+    margin: 10px;
+    right: 48px;
+    position: relative;
 }
 
 #navbarText {
     
     color: white;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 .nav-link {
     color: white;
+    animation-duration: 0.1;
+}
+
+.navbar-nav {
+    --bs-nav-link-hover-color: rgb(0, 225, 255);
 }
 
 
@@ -40,7 +45,6 @@ header {
 }
 #icon {
     text-align: center;
-    margin-right: 95px;
     height: 110px;
     width: 150px;
     left: 6px;
