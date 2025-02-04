@@ -28,10 +28,13 @@ html, body {
     --bs-nav-link-hover-color: rgb(0, 225, 255);
 }
 .card {
-    background-color: #1f1f1f;
+    background-color: #5e5e5e;
     color: white;
     border-radius: 35px;
+    margin: 50px;
+    width: 90%;
 }
+
 
 
 header {
@@ -60,8 +63,12 @@ header {
 
 .container {
     text-align: center;
-    
+    background-color: #747474;
+    border-radius: 5%;
   
+}
+.container-one {
+    
 }
 
 #PhotoBis {
@@ -120,42 +127,64 @@ section {
 }
 
 
+/* Conteneur du terminal */
 #terminal {
-    width: 80%;
+    width: 69%;
     margin: 50px auto;
-    background-color: #0a0a0a; /* Fond très sombre pour simuler le terminal Kali Linux */
+    background-color: #0d0d0d; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Ombre sombre pour donner un effet réaliste */
-    color: #33cc33; /* Texte vert typique des terminaux Kali Linux */
+    box-shadow: 0 0 50px #0400ff; 
     min-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     text-align: left;
+    font-family: "Courier New", monospace; 
 }
+   
 
-/* En-tête du terminal (comme user@kali:~$) */
 #header {
     font-size: 18px;
-    color: #33cc33; /* Texte vert clair */
+    color: #ffffff; /* Bleu électrique */
     font-weight: bold;
     margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #33cc33; /* Ligne séparatrice pour l'en-tête */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #006aff; /* Ligne verte */
+    text-shadow: 0 0 5px rgba(25, 0, 255, 0.8);
+    text-align: center;
 }
 
-/* Style de texte (output) */
+/* Zone de texte */
 pre {
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
     word-wrap: break-word;
     font-size: 16px;
-    margin: 0; /* Enlever les marges internes */
+    margin: 0;
 }
 
-/* Détails des commandes */
+/* Commandes tapées */
 #terminal .input-line {
-    color: #ff0202; /* Commandes en vert, comme sur Kali */
+    color: #00aaff; /* Bleu inspiré de Kali */
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.8);
 }
 
+/* Résultats des commandes */
 #terminal .output-line {
-    color: #f5f5f5; /* Résultats en blanc */
+    color: #f5f5f5; /* Blanc cassé pour la sortie */
+}
+
+/* Curseur clignotant */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #00ff00; /* Vert phosphorescent */
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+}
+
+/* Animation du curseur */
+@keyframes blink {
+    50% { opacity: 0; }
 }

@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Liste des lignes à afficher dans le terminal
     const lines = [
-        { input: 'Wohami@kali:~$ echo "Mes certifications et diplomes"', output: 'Mes certifications et diplomes' },
-        { input: 'Wohami@kali:~$ ls', output: 'Projets  Contact  À propos' },
-        { input: 'Wohami@kali:~$ cat projet.txt', output: 'Mon projet actuel est une application web de cybersécurité.' },
-        { input: 'Wohami@kali:~$ date', output: '2025-02-04 14:35:47' },
-        { input: 'Wohami@kali:~$ exit', output: 'Déconnexion...' }
+        { input: '┌──(wohami㉿kali)-[~]\n└─$ echo "Mes certifications et diplomes"', output: 'Mes certifications et diplomes' },
+        { input: '┌──(wohami㉿kali)-[~]\n└─$ ls', output: 'Projets  Contact  À propos' },
+        { input: '┌──(wohami㉿kali)-[~]\n└─$ cat projet.txt', output: 'Mon projet actuel est une application web de cybersécurité.' },
+        { input: '┌──(wohami㉿kali)-[~]\n└─$ date', output: '2025-02-04 14:35:47' },
+        { input: '┌──(wohami㉿kali)-[~]\n└─$  exit', output: 'Déconnexion...' }
     ];
 
     let currentLine = 0;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let charIndex = 0;
         const typingSpeed = 50; // Vitesse de frappe en ms
 
-        // Affichage de la ligne de commande
+
         const inputLine = document.createElement('div');
         inputLine.classList.add('input-line');
         terminalOutput.appendChild(inputLine);
