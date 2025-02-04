@@ -8,3 +8,10 @@ html, body {
     height: 180px;
     width:  180px;
 }
+
+.container {
+    text-align: center;
+    background-color: #747474;
+    border-radius: 5%;
+  
+}
