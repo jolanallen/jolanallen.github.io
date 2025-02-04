@@ -30,6 +30,7 @@ html, body {
 .card {
     background-color: #1f1f1f;
     color: white;
+    border-radius: 35px;
 }
 
 
@@ -75,6 +76,9 @@ header {
     padding-bottom: 50px;
 
 }
+.btn {
+    margin: 15px;
+}
 
 
 section {
@@ -116,3 +120,42 @@ section {
 }
 
 
+#terminal {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #0a0a0a; /* Fond très sombre pour simuler le terminal Kali Linux */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Ombre sombre pour donner un effet réaliste */
+    color: #33cc33; /* Texte vert typique des terminaux Kali Linux */
+    min-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+/* En-tête du terminal (comme user@kali:~$) */
+#header {
+    font-size: 18px;
+    color: #33cc33; /* Texte vert clair */
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #33cc33; /* Ligne séparatrice pour l'en-tête */
+}
+
+/* Style de texte (output) */
+pre {
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    font-size: 16px;
+    margin: 0; /* Enlever les marges internes */
+}
+
+/* Détails des commandes */
+#terminal .input-line {
+    color: #ff0202; /* Commandes en vert, comme sur Kali */
+}
+
+#terminal .output-line {
+    color: #f5f5f5; /* Résultats en blanc */
+}

@@ -11,5 +11,15 @@
     "url": "git+https://github.com/jolanallen/jolanallen.github.io.git"
   },
   "author": "jolan allen",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jolanallen/jolanallen.github.io/issues"
+  },
+  "homepage": "https://github.com/jolanallen/jolanallen.github.io#readme",
+  "keywords": [],
+  "dependencies": {
+    "shelljs": "^0.8.5",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {}
 }
