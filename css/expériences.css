@@ -4,25 +4,14 @@ html, body {
     color: rgb(255, 255, 255);
     height: 100%;
 }
-.navbar-brand {
-    color: red;
+#Photo {
+    height: 180px;
+    width:  180px;
 }
-
-.modal-dialog {
-    max-width: 80%; 
-    margin: 1.75rem auto; 
-}
-
-
-.modal-content {
-    min-height: 700px; 
-
-}
-
 
 .container {
     text-align: center;
-    background-color: #747474;
+    background-color: #272727;
     border-radius: 5%;
   
 }

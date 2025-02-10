@@ -14,48 +14,53 @@
     <link rel="shortcut icon"  href="/contenu/images/favicon.ico" type="icon" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a id="icon" class="rounded-circle" href="/index.html"><img id="icon" src="/contenu/images/logo.png"/></a>
-            <h1 class="nav-brand">Mes Expériences</h1>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-label="Toggle navigation">
-                <div class="hamburger-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a id="icon" class="rounded-circle" href="/index.html"><img id="icon" src="/contenu/images/logo.png"/></a>
+                <h1 class="nav-brand">ALLEN JOLAN</h1>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-label="Toggle navigation">
+                    <div class="hamburger-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText" >
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/html/certif.html"><h3>Dîplomes, Certifications</h3></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/projet.html"><h3>Mes Projets</h3></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/expériences.html"><h3>Mes Expériences</h3></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/contact.html"><h3>Me Contacter</h3></a></li>
+                    </ul>
                 </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText" >
-                <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="/index.html"><h3>Acceuil</h3></a></li>
-                  <li class="nav-item"><a class="nav-link" href="/html/certif.html"><h3>Dîplomes, Certifications</h3></a></li>
-                  <li class="nav-item"><a class="nav-link" href="/html/projet.html"><h3>Mes Projets</h3></a></li>
-                  <li class="nav-item"><a class="nav-link" href="/html/contact.html"><h3>Me Contacter</h3></a></li>
-                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="card text-center mt-5">
+        <div class="row">
+            <div class="col-md-15">
+                <div id="terminal">
+                    <div id="header">
+                        <span class="user-info">Wohami@kali:~$</span>
+                    </div>
+                        <pre id="output"></pre>
+                    </div>  
+                </div>  
+            </div>                 
+    </section>
+    <section class="content-section">
+        <div class="container mt-5">
+            <div class="row" id="projectsContainer">
+                <!-- Les cartes de projets générées par le script JavaScript seront insérées ici -->
             </div>
         </div>
-    </nav>
-  </header>
-  <section class="container-one my-5">
-    <div id="terminal">
-        <div id="header">
-            <span class="user-info">Wohami@kali:~$</span>
-        </div>
-        <pre id="output"></pre>
-    </div>    
-</section> 
-    <section class="content-section">
-    <div class="container mt-5">
-        <div class="row" id="projectsContainer">
-            <!-- Les cartes de projets générées par le script JavaScript seront insérées ici -->
-        </div>
-    </div>
-</section>          
-  <section class="footer mt-5 fixed-bottom">
-      <p id="Copyright">&copy; <script>document.write( new Date().getUTCFullYear() );</script> Allen Jolan</p>
-  </section>
+    </section>     
+       
+    <section class="footer mt-5 fixed-bottom">
+        <p id="Copyright">&copy; <script>document.write( new Date().getUTCFullYear() );</script> Allen Jolan</p>
+    </section>
    
   </body>
   <script src="/js/terminal.js" rel="script"></script>
