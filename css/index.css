@@ -1,5 +1,5 @@
 /* Base styles */
-html, body {
+html {
     text-align: center;
     font-family: system-ui, sans-serif;
     color: white;
@@ -8,6 +8,43 @@ html, body {
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #646464;
+    justify-content: center;
+}
+
+
+/*//////////////////////////////////////////////////////// Header /////////////////////////////////////////////////////////*/
+header {
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    height: 20%;
+   
+}
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+    pointer-events: none; 
+    margin-bottom: 50px;
+}
+#Photo {
+    max-width: 10%;
+    height: auto;
+    justify-content: center;
+}
+#icon {
+   max-height: 10rem;
+   max-width: auto;
+   
+}
+
 
 /* Navbar */
 .nav-brand {
@@ -33,6 +70,7 @@ html, body {
     --bs-nav-link-hover-color: rgb(0, 225, 255);
 }
 
+
 /* Cards */
 .card {
     background-color: #272727;
@@ -43,31 +81,11 @@ html, body {
     padding: 1.5rem;
 }
 
-/* Header */
-header {
-    background-image: url("../contenu/images/fond.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 1rem;
-}
 
-/* Images */
-#Profile, #icon {
-    max-width: 100%;
-    height: auto;
-}
 
-#icon {
-    width: 150px;
-    height: 110px;
-}
 
-#PhotoBis {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-}
+
+
 
 /* Container */
 .container {
@@ -82,37 +100,106 @@ header {
     white-space: nowrap;
 }
 
-/* Hamburger menu */
+/*/////////////////////////////////////////// Hamburger btn menu ///////////////////////////////////*/
 .hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 20px;
+    width: 45px;
+    height: 40px;
     margin: 5px 0;
 }
 
 .bar {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 5px;
     background-color: white;
     transition: transform 0.3s ease;
 }
 
+/*//////////////////////////////////////////footer final//////////////////////////////////////////*/
+
+#Copyright {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.site-footer {
+    background-color: #080808;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.site-footer::after {
+    content: "";
+    position: absolute;
+    top: -30px; 
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    pointer-events: none; 
+}
+
+
+.site-footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 10px 30px;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0400ff;
+    transform: scale(1.8);
+}
+
+.bi {
+    width: 32px;
+    height: 32px;
+}
+/*//////////////////////////////////////////footer final//////////////////////////////////////////*/
+
+/*//////////////////////////////////////////terminal rendering ///////////////////////////////////*/
 /* Terminal */
 #terminal {
-    width: min(90%, 800px);
     margin: 2rem auto;
     background-color: #0d0d0d;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 0 50px #0400ff;
-    min-height: 300px;
     max-height: 400px;
     overflow-y: auto;
     text-align: left;
-    font-family: "Courier New", monospace;
+    width: min(95%, 1200px);
 }
 
 #header {
@@ -122,19 +209,10 @@ header {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #006aff;
-    text-shadow: 0 0 5px rgba(25, 0, 255, 0.8);
     text-align: center;
 }
 
-/* Footer */
-#Copyright, .footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    width: 100%;
-}
 
-/* Terminal text */
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -143,16 +221,15 @@ pre {
 }
 
 .input-line {
-    color: #00aaff;
+    color: #006aff;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 170, 255, 0.8);
+    text-shadow: 0 0 5px #006aff;
 }
 
 .output-line {
     color: #f5f5f5;
 }
 
-/* Cursor animation */
 .cursor {
     display: inline-block;
     width: 8px;
@@ -161,6 +238,7 @@ pre {
     margin-left: 5px;
     animation: blink 0.8s infinite;
 }
+/*//////////////////////////////////////////terminal rendering ///////////////////////////////////*/
 
 @keyframes blink {
     50% { opacity: 0; }
@@ -331,4 +409,3 @@ pre {
     height: 60px;
   }
 }
-
