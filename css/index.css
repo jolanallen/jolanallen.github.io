@@ -9,17 +9,18 @@ html {
     padding: 0;
 }
 body {
-    background-color: #646464;
+    background-color: #6b6b6b;
     justify-content: center;
 }
 
 
-/*//////////////////////////////////////////////////////// Header /////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////// Header and navbar /////////////////////////////////////////////////////////*/
 header {
-    background-color: #000000;
+    background-image: url("../contenu/images/!--\ Section\ Projets\ --\(1\).png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    background-position-y: top;
     margin-bottom: 50px;
     height: 20%;
    
@@ -30,14 +31,14 @@ header::after {
     left: 0;
     width: 100%;
     height: 50px; 
-    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+    background: linear-gradient(to bottom, #141414, transparent);
     pointer-events: none; 
     margin-bottom: 50px;
 }
 #Photo {
-    max-width: 10%;
+    max-width: 15rem;
     height: auto;
-    justify-content: center;
+    margin-bottom: 2rem;
 }
 #icon {
    max-height: 10rem;
@@ -45,40 +46,36 @@ header::after {
    
 }
 
-
-/* Navbar */
-.nav-brand {
-    color: #006eff;
-    margin: 10px;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-}
-
 .navbar {
     padding: 1rem;
 }
 
-#navbarText {
-    color: white;
-}
 
 .nav-link {
     color: white;
     transition: color 0.3s ease;
+    text-shadow: 0 0 10px #ffffff;
+}
+.nav-link:hover {
+    background-color: #080808;
+    color: #ffffff;
+    background: linear-gradient(to left, #979797, #141414);
+    
 }
 
-.navbar-nav {
-    --bs-nav-link-hover-color: rgb(0, 225, 255);
-}
+/*////////////////////////////////////////Header and*/
 
 
-/* Cards */
+
+
 .card {
     background-color: #272727;
     color: white;
     border-radius: 35px;
-    margin: 2rem auto;
-    width: min(90%, 1200px);
+    margin: 1.5rem auto;
+    width: min(95%, 1600px);
     padding: 1.5rem;
+   
 }
 
 
@@ -89,9 +86,11 @@ header::after {
 
 /* Container */
 .container {
-    width: min(95%, 1400px);
-    margin: 0 auto;
-    padding: 1rem;
+    background-color: #ff00ff;
+    color: white;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    max-width: 100%;
 }
 
 /* Buttons */
@@ -115,7 +114,8 @@ header::after {
     width: 100%;
     height: 5px;
     background-color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3 #0400ff;
+    
 }
 
 /*//////////////////////////////////////////footer final//////////////////////////////////////////*/
@@ -129,20 +129,24 @@ header::after {
 }
 
 .site-footer {
-    background-color: #080808;
+    background-image: url("../contenu/images/!--\ Section\ Projets\ .png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #ffffff;
     text-align: center;
     position: relative;
+    margin-top: 100px;
 }
 
 .site-footer::after {
     content: "";
     position: absolute;
-    top: -30px; 
+    top: -40px; 
     left: 0;
     width: 100%;
-    height: 50px; 
-    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    height: 40px; 
+    background: linear-gradient(to top, #141414, transparent);
     pointer-events: none; 
 }
 
@@ -176,10 +180,10 @@ header::after {
     margin: 10px 30px;
     color: #ffffff;
     transition: transform 0.3s ease, color 0.3s ease;
+    scale: 1.5;
 }
 
 .social-link:hover {
-    color: #0400ff;
     transform: scale(1.8);
 }
 
@@ -199,7 +203,8 @@ header::after {
     max-height: 400px;
     overflow-y: auto;
     text-align: left;
-    width: min(95%, 1200px);
+    
+    max-width: 1600px;
 }
 
 #header {

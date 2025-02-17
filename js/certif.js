@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const projectContainer = document.querySelector('.container.mt-5 .row');
+    const projectContainer = document.querySelector('.container-modal');
 
     // Chargement de  la bibliothèque PDF.js
     const pdfJsLibUrl = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js";
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.setAttribute('aria-labelledby', 'genericModalLabel');
             modal.setAttribute('aria-hidden', 'true');
             modal.innerHTML = `
-                <div class="modal-dialog" style="max-width: 60%; max-height: 80vh;">
+                <div class="modal-dialog"  tabindex="-1" style="max-width: 90%; max-height: 70vh;">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="genericModalLabel"></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body" id="pdfContainer">
-                            <!-- Les pages PDF seront affichées ici -->
+                        <div class="modal-body" id="pdfContainer" style="max-width: 100%; overflow-x: auto; overflow-y: auto;">
+                                        <!-- Le contenu du PDF sera affiché ici -->
                         </div>
                     </div>
                 </div>
