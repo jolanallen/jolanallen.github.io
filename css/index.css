@@ -2,6 +2,7 @@
 html {
     text-align: center;
     font-family: system-ui, sans-serif;
+    font-size: 14px;
     color: white;
     background-color: rgb(54, 52, 52);
     height: 100%;
@@ -75,16 +76,18 @@ header::after {
 .card {
     background-color: #272727;
     color: white;
-    border-radius: 35px;
-    margin: 1.5rem auto;
+    border-radius: 5%;
+    margin: 1rem auto;
     width: 95%;
-    padding: 1.5rem;
+    padding: 1rem;
    
 }
 
 .card-img-top {
     border-radius: 1rem;
 }
+
+
 
 
 
@@ -223,18 +226,18 @@ header::after {
 #terminal {
     margin: 2rem auto;
     background-color: #0d0d0d;
-    padding: 1.5rem;
     border-radius: 10px;
     max-height: 400px;
     overflow-y: auto;
     text-align: left;
-    width: 95%;
     min-height: 300px;
+    margin-top: 50px;
+    width: 95%;
+    padding: 1rem;
     
 }
 
 #header {
-    font-size: clamp(1rem, 2vw, 1.125rem);
     color: white;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -247,7 +250,6 @@ header::after {
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
     margin: 0;
 }
 
