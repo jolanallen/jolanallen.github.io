@@ -276,7 +276,7 @@ pre {
 /*////////////////////////////////////////// Responsive Design ///////////////////////////////////*/
 
 /* Pour les téléphones (moins de 600px) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 601px) {
     html {
         font-size: 14px;
     }
@@ -375,7 +375,8 @@ pre {
 
     .card {
         width: 85%;
-        padding: 1.2rem;
+        padding: 1rem;
+        border-radius: 2rem;
     }
 
     #terminal {
