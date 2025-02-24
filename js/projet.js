@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.setAttribute('aria-labelledby', 'genericModalLabel');
             modal.setAttribute('aria-hidden', 'true');
             modal.innerHTML = `
-                <div class="modal-dialog" style="max-width: 50vw; max-height: 80vh;">
+                <div class="modal-dialog" style="max-width: 95vw; max-height: 80vh;">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="genericModalLabel"></h5>
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(projects => {
                 projects.forEach(project => {
-
                     const projectCard = document.createElement('div');
                     projectCard.classList.add('col-md-4', 'mb-4');
                     projectCard.innerHTML = `
@@ -76,18 +75,83 @@ document.addEventListener('DOMContentLoaded', () => {
                                 pdf.getPage(pageNumber).then(page => {
                                     const canvas = document.createElement('canvas');
                                     const context = canvas.getContext('2d');
+                                    
+                                    if (window.innerWidth <= 399) {
+                                        const viewport = page.getViewport({ scale: 0.4 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                    } else if (window.innerWidth >= 400 & window.innerWidth < 550) {
+                                        const viewport = page.getViewport({ scale: 0.58 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                        
+                                    
+                                    } else if (window.innerWidth >= 550 & window.innerWidth < 665){
+                                        const viewport = page.getViewport({ scale: 0.8 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
 
-                                    const viewport = page.getViewport({ scale: 1.0 });
-                                    canvas.width = viewport.width;
-                                    canvas.height = viewport.height;
-
-                                    pdfContainer.appendChild(canvas); // Ajouter le canvas pour chaque page
-
-                                    const renderContext = {
-                                        canvasContext: context,
-                                        viewport: viewport
-                                    };
-                                    page.render(renderContext);
+                                    } else if (window.innerWidth >= 665 && window.innerWidth < 750) {
+                                        const viewport = page.getViewport({ scale: 1.0 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                    } else if (window.innerWidth >= 750 && window.innerWidth < 850) {
+                                        const viewport = page.getViewport({ scale: 1.1 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                    } else if (window.innerWidth >= 850 && window.innerWidth < 1100) {
+                                        const viewport = page.getViewport({ scale: 1.3 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                    } else  {
+                                        const viewport = page.getViewport({ scale: 1.6 });
+                                        canvas.width = viewport.width;
+                                        canvas.height = viewport.height;
+                                        const renderContext = {
+                                            canvasContext: context,
+                                            viewport: viewport,
+                                        };
+                                        page.render(renderContext);
+                                        pdfContainer.appendChild(canvas);
+                                    } 
+                                    
+                                     
                                 });
                             };
 

@@ -1,20 +1,11 @@
 [
     {
         "id": 1,
-        "title": "Introduction to cybersécurityy by Cisco",
+        "title": "Introduction to cybersécurity by Cisco",
         "year": "01/2025",
         "image": "/contenu/images/miniature/introduction-to-cybersecurity_2.png",
         "description": "Réalisation d'un cloud personnelle sur Raspberry pi",
         "details": "Détails complets du Projet 1.",
-        "pdfLink": "/contenu/document/introduction cybersecurity.pdf"
-    },
-    {
-        "id": 2,
-        "title": "Introduction to cybersécurityy by Cisco",
-        "year": "01/2025",
-        "image": "/contenu/images/miniature/introduction-to-cybersecurity_2.png",
-        "description": "Réalisation d'un cloud personnelle sur Raspberry pi",
-        "details": "Détails complets du Projet 1.",
-        "pdfLink": "/contenu/document/introduction cybersecurity.pdf"
+        "certificats": "/contenu/document/introduction cybersecurity by cisco.png"
     }
 ]
