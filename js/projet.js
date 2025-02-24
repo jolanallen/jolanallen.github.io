@@ -46,11 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h6 class="card-subtitle mb-2 text-muted">${project.year}</h6>
                             <p class="card-text">${project.description}</p>
                             <button type="button" class="btn btn-primary open-modal" data-project-title="${project.title}" data-pdf-link="${project.pdfLink}">
-                                Voir les détails
+                                View project
                             </button>
                             <a href="${project.pdfLink}" class="btn btn-secondary mt-3" target="_blank">
-                                Télécharger le livrable PDF
+                                Download
                             </a>
+                            <p class="card-text">SHA256: ${project.SHA256}</p>
                         </div>
                     </div>
                     `;

@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "Cloud personnelle avec nextcloud",
+        "title": "Personal Cloud with Raspberry PI",
         "year": "01/2025",
         "image": "/contenu/images/miniature/raspcloud.png",
-        "description": "Réalisation d'un cloud personnelle sur Raspberry pi",
-        "details": "Détails complets du Projet 1.",
+        "description": "Building a personal cloud on Raspberry pi with Nextcloud",
+        "SHA256" : "bbc62f31e588eec53ec8cfac0354ad671f414d8a2007886e7ad7491c359a207c",
         "pdfLink": "/contenu/projet/compte_rendu_projet-cloud_allen_jolan.pdf"
     }
 ]
