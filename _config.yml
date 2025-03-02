@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Allen Jolan
 subtitle: ''
-description: ''
+description: Bienvenue dans mon porte folio
 keywords:
-author: John Doe
+author: Allen Jolan
 language: en
-timezone: ''
+timezone: UTC
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://github.com/jolanallen/jolanallen.github.io.git
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,6 +102,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: <https://github.com/jolanallen/jolanallen.github.io.git> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [gh-pages]
-  message: [message]
+  repo: https://github.com/jolanallen/jolanallen.github.io.git
+  branch: gh-pages
+  message: "Deploying site update"
+  token: ''
