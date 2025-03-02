@@ -102,6 +102,6 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: <https://jolanallen/jolanallen.github.io> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [main]
-  message: [update]
+  repo: <https://github.com/jolanallen/jolanallen.github.io.git> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [gh-pages]
+  message: [message]
