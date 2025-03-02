@@ -17,10 +17,16 @@ nav:
   fixed: false
 
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  Home: / || fas fa-home
+  Portfolio||fas fa-briefcase:  # Renommé pour plus de clarté
+    Projets: /projets/ || fas fa-cogs
+    Experience: /experience/ || fas fa-briefcase
+    Certifications: /certifications/ || fas fa-certificate
+  Blog||fas fa-pen:  # Nouvelle section blog
+    Post: /archives/ || fas fa-archive
+    Tags: /tags/ || fas fa-tags
+  About: /about/ || fas fa-user
+  Contact: /contact/ || fas fa-envelope
 
 # --------------------------------------
 # Code Blocks Settings
@@ -31,8 +37,8 @@ code_blocks:
   theme: darker
   macStyle: false
   # Code block height limit (unit: px)
-  height_limit: false
-  word_wrap: false
+  height_limit: 400
+  word_wrap: true
 
   # Toolbar
   copy: true
@@ -45,9 +51,9 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
-
+  fab fa-github: https://github.com/jolanallen || Github || '#24292e'
+  fab fa-linkedin: https://www.linkedin.com/in/jolanallen || LinkedIn || '#0077B5'  # Couleur LinkedIn correcte
+  fas fa-envelope: mailto:jolan.allen.pro@gmail.com || Email || '#D44638'  # Couleur Gmail
 # --------------------------------------
 # Image Settings
 # --------------------------------------
