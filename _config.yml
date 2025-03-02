@@ -104,5 +104,5 @@ deploy:
   type: git
   repo: https://github.com/jolanallen/jolanallen.github.io.git
   branch: gh-pages
-  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  message: "Site updated: {{ now('YY-MM-DD HH:mm:ss') }}"
   
