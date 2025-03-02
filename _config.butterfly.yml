@@ -153,22 +153,21 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
-  # Typewriter Effect
-  effect: true
-  # Customize typed.js
-  # https://github.com/mattboldt/typed.js/#customization
+  enable: true  # Activation du sous-titre
+  effect: true  # Effet de machine à écrire
   typed_option:
-  # Source - Call the third-party service API (Chinese only)
-  # It will show the source first, then show the content of sub
-  # Choose: false/1/2/3
-  # false - disable the function
-  # 1 - hitokoto.cn
-  # 2 - https://api.aa1.cn/doc/yiyan.html
-  # 3 - jinrishici.com
+    strings: ['Cyber Sécurité', 'Réseaux', 'Passionné de Technologies']
+    startDelay: 300
+    typeSpeed: 100
+    backSpeed: 50
+    backDelay: 500
+    loop: true
   source: false
-  # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - Bienvenue dans mon porte folio !!
+
+# Article layout on the homepage
+index_layout: 6
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -178,7 +177,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+
 
 # Display the article introduction on homepage
 # 1: description
@@ -186,9 +185,9 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
-  length: 500
+  length: 250
 
 # --------------------------------------
 # Post Settings
@@ -196,17 +195,17 @@ index_post_content:
 
 toc:
   post: true
-  page: false
+  page: true
   number: true
-  expand: false
+  expand: true
   # Only for post
-  style_simple: false
+  style_simple: true
   scroll_percent: true
 
 post_copyright:
   enable: true
   decode: false
-  author_href:
+  author_href: https://jolanallen.github.io
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -246,7 +245,7 @@ post_pagination: 1
 
 # Displays outdated notice for a post
 noticeOutdate:
-  enable: false
+  enable: true
   # Style: simple / flat
   style: flat
   # When will it be shown
@@ -263,8 +262,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text:
-  # Copyright of theme and framework
+  custom_text: <a href="https://jolanallen.com">Jolan Allen</a> - Développeur Web Full-Stack
   copyright: true
 
 # --------------------------------------
@@ -274,10 +272,8 @@ footer:
 aside:
   enable: true
   hide: false
-  # Show the button to hide the aside in bottom right button
   button: true
   mobile: true
-  # Position: left / right
   position: right
   display:
     archive: true
@@ -285,74 +281,43 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: Passionné par l'informatique, plus particulérement par la sécurité des systémes et des réseaux.
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: Me  Suivre
+      link: https://github.com/jolanallen
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Bienvenue sur mon portfolio ! Découvrez mes projets et mon parcours professionnel, ainsi que mes certifications.
   card_recent_post:
     enable: true
-    # If set 0 will show all
     limit: 5
-    # Sort: date / updated
     sort: date
-    sort_order:
-  card_newest_comments:
-    enable: false
-    sort_order:
-    limit: 6
-    # Unit: mins, save data to localStorage
-    storage: 10
-    avatar: true
+    sort_order: -1  # Du plus récent au plus ancien
   card_categories:
     enable: true
-    # If set 0 will show all
     limit: 8
-    # Choose: none / true / false
-    expand: none
-    sort_order:
+    expand: false
+    sort_order: -1  # Du plus utilisé au moins utilisé
   card_tags:
     enable: true
-    # If set 0 will show all
-    limit: 40
-    color: false
-    # Order of tags, random/name/length
-    orderby: random
-    # Sort of order. 1, asc for ascending; -1, desc for descending
-    order: 1
-    sort_order:
+    limit: 20
+    color: true  # Couleurs pour les tags
+    orderby: length  # Tri par longueur d'utilisation
+    order: -1  # Du plus utilisé au moins utilisé
   card_archives:
     enable: true
-    # Type: monthly / yearly
     type: monthly
-    # Eg: YYYY年MM月
     format: MMMM YYYY
-    # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
-    # If set 0 will show all
     limit: 8
-    sort_order:
-  card_post_series:
-    enable: true
-    # The title shows the series name
-    series_title: false
-    # Order by title or date
-    orderBy: 'date'
-    # Sort of order. 1, asc for ascending; -1, desc for descending
-    order: -1
   card_webinfo:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order:
-    # Time difference between publish date and now
-    # Formal: Month/Day/Year Time or Year/Month/Day Time
-    # Leave it empty if you don't enable this feature
-    runtime_date:
+    runtime_date: 2019/01/01  # Date de début pour le compteur de temps d'exécution
+
 
 # --------------------------------------
 # Bottom right button
