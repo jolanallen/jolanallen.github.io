@@ -1,18 +1,17 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: archives
+date: 2025-03-03 11:55:23
 updated:
-type: {{ type }}
+type: "archives"
 comments:
 description:
 keywords:
-top_img: {{ top_img }}
+top_img:
 mathjax:
 katex:
 aside:
 aplayer:
 highlight_shrink:
 random:
-
 ---
 

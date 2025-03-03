@@ -2,11 +2,11 @@
 title: {{ title }}
 date: {{ date }}
 updated:
-tags:
+tags: {{ tags }}
 categories:
 keywords:
 description:
-top_img:
+top_img: {{ top_img }}
 comments:
 cover:
 toc:

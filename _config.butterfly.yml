@@ -11,20 +11,21 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: img/logo.png  # Ajout d'un logo personnalisé
   display_title: true
   # Whether to fix navigation bar
-  fixed: false
+  fixed: true  # Barre de navigation fixe pour une meilleure UX
 
 menu:
   Home: / || fas fa-home
-  Portfolio||fas fa-briefcase:  # Renommé pour plus de clarté
+  Portfolio || fas fa-briefcase:
     Projets: /projets/ || fas fa-cogs
     Experience: /experience/ || fas fa-briefcase
     Certifications: /certifications/ || fas fa-certificate
-  Blog||fas fa-pen:  # Nouvelle section blog
-    Post: /archives/ || fas fa-archive
+  Blog || fas fa-pen:
+    Archives: /archives/ || fas fa-archive
     Tags: /tags/ || fas fa-tags
+    Categories: /categories/ || fas fa-folder
   About: /about/ || fas fa-user
   Contact: /contact/ || fas fa-envelope
 
@@ -37,8 +38,8 @@ code_blocks:
   theme: darker
   macStyle: false
   # Code block height limit (unit: px)
-  height_limit: 400
-  word_wrap: true
+  height_limit: false
+  word_wrap: flase
 
   # Toolbar
   copy: true
@@ -52,8 +53,8 @@ code_blocks:
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/jolanallen || Github || '#24292e'
-  fab fa-linkedin: https://www.linkedin.com/in/jolanallen || LinkedIn || '#0077B5'  # Couleur LinkedIn correcte
-  fas fa-envelope: mailto:jolan.allen.pro@gmail.com || Email || '#D44638'  # Couleur Gmail
+  fas fa-envelope: mailto:jolan.allen.pro@gmail.com || Email || '#4a7dbe'
+
 # --------------------------------------
 # Image Settings
 # --------------------------------------
@@ -61,14 +62,14 @@ social:
 favicon: /img/favicon.png
 
 avatar:
-  img: /img/butterfly-icon.png
-  effect: false
+  img: img/logo.png
+  effect: true
 
 # Disable all banner images
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: ./img/FOND.jpg
 
 # The banner image of index page
 index_img:
@@ -115,23 +116,24 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: /img/error-page.png
 
 post_meta:
   # Home Page
   page:
+    position: center
     # Choose: created / updated / both
     date_type: created
     # Choose: date / relative
     date_format: date
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     # Choose: left / center
-    position: left
+    position: center
     # Choose: created / updated / both
     date_type: both
     # Choose: date / relative
@@ -153,23 +155,22 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: true  # Activation du sous-titre
-  effect: true  # Effet de machine à écrire
+  enable: true
+  # Typewriter Effect
+  effect: true
+  # Customize typed.js
+  # https://github.com/mattboldt/typed.js/#customization
   typed_option:
-    strings: ['Cyber Sécurité', 'Réseaux', 'Passionné de Technologies']
-    startDelay: 300
-    typeSpeed: 100
-    backSpeed: 50
-    backDelay: 500
-    loop: true
+  # Source - Call the third-party service API (Chinese only)
+  # It will show the source first, then show the content of sub
+  # Choose: false/1/2/3
+  # false - disable the function
+  # 1 - hitokoto.cn
+  # 2 - https://api.aa1.cn/doc/yiyan.html
+  # 3 - jinrishici.com
   source: false
-  sub:
-    - Bienvenue dans mon porte folio !!
-
-# Article layout on the homepage
-index_layout: 6
-
-# Article layout on the homepage
+  # If you close the typewriter effect, the subtitle will only show the first line of sub
+  sub: "Article layout on the homepage"
 # 1: Cover on the left, info on the right
 # 2: Cover on the right, info on the left
 # 3: Cover and info alternate between left and right
@@ -177,7 +178,7 @@ index_layout: 6
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-
+index_layout: 5
 
 # Display the article introduction on homepage
 # 1: description
@@ -185,9 +186,9 @@ index_layout: 6
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 2
+  method: 3
   # If you set method to 2 or 3, the length need to config
-  length: 250
+  length: 500
 
 # --------------------------------------
 # Post Settings
@@ -197,15 +198,15 @@ toc:
   post: true
   page: true
   number: true
-  expand: true
+  expand: false
   # Only for post
-  style_simple: true
+  style_simple: false
   scroll_percent: true
 
 post_copyright:
   enable: true
   decode: false
-  author_href: https://jolanallen.github.io
+  author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -241,11 +242,11 @@ related_post:
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 1
+post_pagination: 3
 
 # Displays outdated notice for a post
 noticeOutdate:
-  enable: true
+  enable: false
   # Style: simple / flat
   style: flat
   # When will it be shown
@@ -261,8 +262,9 @@ noticeOutdate:
 footer:
   owner:
     enable: true
-    since: 2019
-  custom_text: <a href="https://jolanallen.com">Jolan Allen</a> - Développeur Web Full-Stack
+    since: 2024
+  custom_text:
+  # Copyright of theme and framework
   copyright: true
 
 # --------------------------------------
@@ -272,52 +274,85 @@ footer:
 aside:
   enable: true
   hide: false
-  button: true
+  # Show the button to hide the aside in bottom right button
+  button: false
   mobile: true
-  position: right
+  # Position: left / right
+  position: left
   display:
     archive: true
     tag: true
     category: true
   card_author:
     enable: true
-    description: Passionné par l'informatique, plus particulérement par la sécurité des systémes et des réseaux.
+    description:
     button:
       enable: true
       icon: fab fa-github
-      text: Me  Suivre
+      text: Follow Me
       link: https://github.com/jolanallen
   card_announcement:
     enable: true
-    content: Bienvenue sur mon portfolio ! Découvrez mes projets et mon parcours professionnel, ainsi que mes certifications.
+    content: This is my Blog
   card_recent_post:
     enable: true
+    # If set 0 will show all
     limit: 5
+    # Sort: date / updated
     sort: date
-    sort_order: -1  # Du plus récent au plus ancien
+    sort_order:
+  card_newest_comments:
+    enable: false
+    sort_order:
+    limit: 6
+    # Unit: mins, save data to localStorage
+    storage: 10
+    avatar: true
   card_categories:
     enable: true
+    # If set 0 will show all
     limit: 8
-    expand: false
-    sort_order: -1  # Du plus utilisé au moins utilisé
+    # Choose: none / true / false
+    expand: true
+    sort_order:
   card_tags:
     enable: true
-    limit: 20
-    color: true  # Couleurs pour les tags
-    orderby: length  # Tri par longueur d'utilisation
-    order: -1  # Du plus utilisé au moins utilisé
+    # If set 0 will show all
+    limit: 40
+    color: true
+    # Order of tags, random/name/length
+    orderby: random
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: 1
+    sort_order:
   card_archives:
     enable: true
+    # Type: monthly / yearly
     type: monthly
+    # Eg: YYYY年MM月
     format: MMMM YYYY
+    # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
+    # If set 0 will show all
     limit: 8
+    sort_order:
+  card_post_series:
+    enable: true
+    # The title shows the series name
+    series_title: false
+    # Order by title or date
+    orderBy: 'date'
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: -1
   card_webinfo:
     enable: true
     post_count: true
     last_push_date: true
-    runtime_date: 2019/01/01  # Date de début pour le compteur de temps d'exécution
-
+    sort_order:
+    # Time difference between publish date and now
+    # Formal: Month/Day/Year Time or Year/Month/Day Time
+    # Leave it empty if you don't enable this feature
+    runtime_date:
 
 # --------------------------------------
 # Bottom right button
@@ -506,7 +541,9 @@ comments:
 disqus:
   shortname:
   # For newest comments widget
-  apikey:
+  apikey:date: 2025-03-03 12:12:44
+updated: 2025-03-03 12:30:00
+type: post
 
 # Alternative Disqus - Render comments with Disqus API
 # https://github.com/SukkaW/DisqusJS
@@ -837,7 +874,7 @@ fireworks:
 
 # Mouse click effects: Heart symbol
 click_heart:
-  enable: false
+  enable: true
   mobile: false
 
 # Mouse click effects: words
@@ -867,7 +904,7 @@ lightbox:
 
 # Series
 series:
-  enable: false
+  enable: true
   # Order by title or date
   orderBy: 'title'
   # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -888,8 +925,8 @@ mermaid:
   code_write: false
   # built-in themes: default / forest / dark / neutral
   theme:
-    light: default
-    dark: dark
+    light: light
+    dark: default
 
 # chartjs
 # see https://www.chartjs.org/docs/latest/
