@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Starting Point Dancing - Hack the Box | Allen Jolan</title><meta name="author" content="Allen Jolan"><meta name="copyright" content="Allen Jolan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Box Starting Point - Hack The Box">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Starting Point Dancing - Hack the Box">
+<meta property="og:url" content="https://jolanallen.github.io/2025/02/25/Dancing/index.html">
+<meta property="og:site_name" content="Allen Jolan">
+<meta property="og:description" content="Box Starting Point - Hack The Box">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jolanallen.github.io/images/writeups/Dancing/image.png">
+<meta property="article:published_time" content="2025-02-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-24T08:09:18.777Z">
+<meta property="article:author" content="Allen Jolan">
+<meta property="article:tag" content="HackTheBox">
+<meta property="article:tag" content="SMB">
+<meta property="article:tag" content="VeryEasy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jolanallen.github.io/images/writeups/Dancing/image.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Starting Point Dancing - Hack the Box",
+  "url": "https://jolanallen.github.io/2025/02/25/Dancing/",
+  "image": "https://jolanallen.github.io/images/writeups/Dancing/image.png",
+  "datePublished": "2025-02-25T00:00:00.000Z",
+  "dateModified": "2025-03-24T08:09:18.777Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Allen Jolan",
+      "url": "https://jolanallen.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://jolanallen.github.io/2025/02/25/Dancing/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.3.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Starting Point Dancing - Hack the Box',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/writeups/"><i class="fa-fw fas fa-folder-open"></i><span> Writeups</span></a></div><div class="menus_item"><a class="site-page" href="/categories/Projets/"><i class="fa-fw fas fa-folder-open"></i><span> Projects</span></a></div><div class="menus_item"><a class="site-page" href="/categories/CertificationsDiplomes/"><i class="fa-fw fas fa-folder-open"></i><span> Certifications</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About of Me</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/cyberpunk-red.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Allen Jolan</span></a><a class="nav-page-title" href="/"><span class="site-name">Starting Point Dancing - Hack the Box</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/writeups/"><i class="fa-fw fas fa-folder-open"></i><span> Writeups</span></a></div><div class="menus_item"><a class="site-page" href="/categories/Projets/"><i class="fa-fw fas fa-folder-open"></i><span> Projects</span></a></div><div class="menus_item"><a class="site-page" href="/categories/CertificationsDiplomes/"><i class="fa-fw fas fa-folder-open"></i><span> Certifications</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About of Me</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Starting Point Dancing - Hack the Box</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-02-25T00:00:00.000Z" title="Created 2025-02-25 00:00:00">2025-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-03-24T08:09:18.777Z" title="Updated 2025-03-24 08:09:18">2025-03-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/writeups/">writeups</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>Le <strong>protocole SMB (Server Message Block)</strong> est un <strong>protocole de communication client-serveur</strong> principalement utilisé pour le <strong>partage de fichiers</strong> et d’autres ressources sur un réseau. Il permet aux applications de lire et d’écrire dans des fichiers et de demander des services auprès de programmes serveurs, notamment sur des systèmes d’exploitation Windows. SMB est aussi utilisé pour accéder à des ressources partagées comme des <strong>systèmes de fichiers</strong>, <strong>imprimantes</strong>, <strong>ports série</strong>, et plus encore.</p>
+<h4 id="Vue-d’ensemble-du-protocole-SMB"><a href="#Vue-d’ensemble-du-protocole-SMB" class="headerlink" title="Vue d’ensemble du protocole SMB"></a>Vue d’ensemble du protocole SMB</h4><p>Le protocole SMB permet de <strong>partager des fichiers</strong> entre des machines, ce qui le rend utile pour accéder à des fichiers et répertoires sur des ordinateurs connectés en réseau. Il fonctionne principalement sur le <strong>port TCP 445</strong> pour la communication sécurisée. Les anciennes versions de SMB (comme SMBv1) pouvaient également utiliser le port 139.</p>
+<h3 id="Resultats-du-scan-Nmap"><a href="#Resultats-du-scan-Nmap" class="headerlink" title="Résultats du scan Nmap"></a>Résultats du scan Nmap</h3><p>Pour commencer, un scan <strong>Nmap</strong> a été effectué sur le <strong>port 445</strong> de l’adresse IP cible <strong>10.129.41.30</strong> afin de détecter la disponibilité du service SMB.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(jolan㉿jolan)-[~]</span><br><span class="line">└─$ nmap -p 445 -Pn -sV 10.129.41.30</span><br><span class="line">Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-11 09:39 CET</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.129.41.30</span><br><span class="line">Host is up.</span><br><span class="line"></span><br><span class="line">PORT    STATE    SERVICE      VERSION</span><br><span class="line">445/tcp filtered microsoft-ds</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 2.29 seconds</span><br></pre></td></tr></table></figure>
+
+<p>Le résultat montre que le port <strong>445</strong> est <strong>filtré</strong>, ce qui signifie que le service SMB est probablement présent, mais il est peut-être protégé par un pare-feu ou d’autres mesures de sécurité.</p>
+<h3 id="Liste-des-Partages-SMB-Disponibles"><a href="#Liste-des-Partages-SMB-Disponibles" class="headerlink" title="Liste des Partages SMB Disponibles"></a>Liste des Partages SMB Disponibles</h3><p>Ensuite, l’outil <strong>smbclient</strong> a été utilisé pour lister les partages disponibles sur la machine cible <strong>10.129.41.30</strong>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(jolan㉿jolan)-[~]</span><br><span class="line">└─$ smbclient -L 10.129.41.30</span><br><span class="line">Password <span class="keyword">for</span> [WORKGROUP\jolan]:</span><br><span class="line"></span><br><span class="line">        Sharename       Type      Comment</span><br><span class="line">        ---------       ----      -------</span><br><span class="line">        ADMIN$          Disk      Remote Admin</span><br><span class="line">        C$              Disk      Default share</span><br><span class="line">        IPC$            IPC       Remote IPC</span><br><span class="line">        WorkShares      Disk      </span><br><span class="line">Reconnecting with SMB1 <span class="keyword">for</span> workgroup listing.</span><br><span class="line">do_connect: Connection to 10.129.41.30 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)</span><br><span class="line">Unable to connect with SMB1 -- no workgroup available</span><br></pre></td></tr></table></figure>
+
+<p>Plusieurs partages SMB sont disponibles :</p>
+<ul>
+<li><strong>ADMIN$</strong> : Partage administratif, généralement utilisé pour l’administration à distance.</li>
+<li><strong>C$</strong> : Partage par défaut du disque C:.</li>
+<li><strong>IPC$</strong> : Partage de communication inter-processus utilisé pour la communication entre processus.</li>
+<li><strong>WorkShares</strong> : Partage défini par l’utilisateur.</li>
+</ul>
+<h3 id="Connexion-aux-Partages-SMB"><a href="#Connexion-aux-Partages-SMB" class="headerlink" title="Connexion aux Partages SMB"></a>Connexion aux Partages SMB</h3><p>Pour accéder au partage <strong>WorkShares</strong>, la commande suivante a été utilisée avec un mot de passe vide (<code>-N</code>), ce qui signifie une connexion sans mot de passe :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">smbclient //10.129.41.30/WorkShares -N</span><br></pre></td></tr></table></figure>
+
+<p>Cela a permis de se connecter avec succès au partage sans nécessiter de mot de passe.</p>
+<h3 id="Navigation-dans-le-Repertoire-WorkShares"><a href="#Navigation-dans-le-Repertoire-WorkShares" class="headerlink" title="Navigation dans le Répertoire WorkShares"></a>Navigation dans le Répertoire WorkShares</h3><p>Une fois dans le répertoire <strong>WorkShares</strong>, la commande <code>ls</code> a été utilisée pour lister le contenu :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">smb: \&gt; <span class="built_in">ls</span></span><br><span class="line">  .                                   D        0  Mon Mar 29 10:22:01 2021</span><br><span class="line">  ..                                  D        0  Mon Mar 29 10:22:01 2021</span><br><span class="line">  Amy.J                               D        0  Mon Mar 29 11:08:24 2021</span><br><span class="line">  James.P                             D        0  Thu Jun  3 10:38:03 2021</span><br><span class="line"></span><br><span class="line">                5114111 blocks of size 4096. 1753896 blocks available</span><br></pre></td></tr></table></figure>
+
+<p>Le répertoire <strong>James.P</strong> a été trouvé, et après y être allé, le fichier suivant a été découvert :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">smb: \James.P\&gt; <span class="built_in">ls</span></span><br><span class="line">  .                                   D        0  Thu Jun  3 10:38:03 2021</span><br><span class="line">  ..                                  D        0  Thu Jun  3 10:38:03 2021</span><br><span class="line">  flag.txt                            A       32  Mon Mar 29 11:26:57 2021</span><br><span class="line"></span><br><span class="line">                5114111 blocks of size 4096. 1753896 blocks available</span><br></pre></td></tr></table></figure>
+
+<p>Le fichier <strong>flag.txt</strong> semble contenir un indice ou un drapeau.</p>
+<h3 id="Telechargement-du-Flag"><a href="#Telechargement-du-Flag" class="headerlink" title="Téléchargement du Flag"></a>Téléchargement du Flag</h3><p>La commande <code>get</code> a été utilisée pour télécharger le fichier <strong>flag.txt</strong> sur la machine locale :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">smb: \James.P\&gt; get flag.txt /home/jolan/Bureau/flag.txt</span><br><span class="line">getting file \James.P\flag.txt of size 32 as /home/jolan/Bureau/flag.txt (0.1 KiloBytes/sec) (average 0.1 KiloBytes/sec)</span><br></pre></td></tr></table></figure>
+
+<p>Le fichier <strong>flag.txt</strong> a été téléchargé avec succès, et son contenu a été récupéré.</p>
+<h4 id="Contenu-du-Flag"><a href="#Contenu-du-Flag" class="headerlink" title="Contenu du Flag"></a>Contenu du Flag</h4><p>Le contenu du <strong>flag.txt</strong> est :</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5f61c10dffbc77a704d76016a22f1664</span><br></pre></td></tr></table></figure>
+
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Grâce à l’utilisation des outils <strong>Nmap</strong>, <strong>smbclient</strong> et de la navigation dans les répertoires, le protocole SMB a été exploité pour accéder aux ressources partagées, et un flag a été récupéré dans le répertoire <strong>James.P</strong>. Cela met en évidence l’importance de sécuriser les partages SMB pour éviter tout accès non autorisé aux ressources sensibles.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://jolanallen.github.io">Allen Jolan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://jolanallen.github.io/2025/02/25/Dancing/">https://jolanallen.github.io/2025/02/25/Dancing/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HackTheBox/">HackTheBox</a><a class="post-meta__tags" href="/tags/SMB/">SMB</a><a class="post-meta__tags" href="/tags/VeryEasy/">VeryEasy</a></div><div class="post-share"><div class="social-share" data-image="/images/writeups/Dancing/image.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box"><img class="cover" src="/images/writeups/REDEEMER/image.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Starting Point Redeemer - Hack the Box</div></div><div class="info-2"><div class="info-item-1">IntroductionLe challenge “Redeemer” sur Hack The Box nous amène à interagir avec un service Redis sur un serveur à distance. Redis est un système de gestion de base de données en mémoire, utilisé principalement pour la mise en cache de données et la gestion de données temporaires. L’objectif de ce challenge est d’exploiter un serveur Redis pour obtenir un flag. Étape 1: Identifier le Port OuvertLa première étape consiste à déterminer quel port est ouvert sur la machine cible. Nous avons...</div></div></div></a><a class="pagination-related" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course"><img class="cover" src="/images/CertificationsD%C3%AEplomes/introduction-cybersecurity.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Introduction à la cyber sécurité par Cisco - Course</div></div><div class="info-2"><div class="info-item-1">Introduction à la Cybersécurité par Cisco </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box"><img class="cover" src="/images/writeups/REDEEMER/image.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-05</div><div class="info-item-2">Starting Point Redeemer - Hack the Box</div></div><div class="info-2"><div class="info-item-1">IntroductionLe challenge “Redeemer” sur Hack The Box nous amène à interagir avec un service Redis sur un serveur à distance. Redis est un système de gestion de base de données en mémoire, utilisé principalement pour la mise en cache de données et la gestion de données temporaires. L’objectif de ce challenge est d’exploiter un serveur Redis pour obtenir un flag. Étape 1: Identifier le Port OuvertLa première étape consiste à déterminer quel port est ouvert sur la machine cible. Nous avons...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Allen Jolan</div><div class="author-info-description">Étudiant en cybersécurité, passionné par la sécurité des systèmes et l'informatique. Actuellement en bachelor de cybersécurité, j'aime apprendre constamment et relever de nouveaux défis pour approfondir mes compétences.</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/jolanallen" target="_blank" title="Github"><i class="fab fa-github" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/jolan-allen/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Bienvenu dans mon Porte folio ! Je vais partager mes write-ups sur des plateformes comme Hack The Box, TryHackMe, ainsi que mes projets personnels et mes certifications. Vous trouverez aussi une section "About Me" pour découvrir mon parcours et mes passions.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Vue-d%E2%80%99ensemble-du-protocole-SMB"><span class="toc-number">2.</span> <span class="toc-text">Vue d’ensemble du protocole SMB</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resultats-du-scan-Nmap"><span class="toc-number"></span> <span class="toc-text">Résultats du scan Nmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Liste-des-Partages-SMB-Disponibles"><span class="toc-number"></span> <span class="toc-text">Liste des Partages SMB Disponibles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connexion-aux-Partages-SMB"><span class="toc-number"></span> <span class="toc-text">Connexion aux Partages SMB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigation-dans-le-Repertoire-WorkShares"><span class="toc-number"></span> <span class="toc-text">Navigation dans le Répertoire WorkShares</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Telechargement-du-Flag"><span class="toc-number"></span> <span class="toc-text">Téléchargement du Flag</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Contenu-du-Flag"><span class="toc-number">1.</span> <span class="toc-text">Contenu du Flag</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-number"></span> <span class="toc-text">Conclusion</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box"><img src="/images/writeups/REDEEMER/image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Starting Point Redeemer - Hack the Box"/></a><div class="content"><a class="title" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box">Starting Point Redeemer - Hack the Box</a><time datetime="2025-03-05T00:00:00.000Z" title="Created 2025-03-05 00:00:00">2025-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/25/Dancing/" title="Starting Point Dancing - Hack the Box"><img src="/images/writeups/Dancing/image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Starting Point Dancing - Hack the Box"/></a><div class="content"><a class="title" href="/2025/02/25/Dancing/" title="Starting Point Dancing - Hack the Box">Starting Point Dancing - Hack the Box</a><time datetime="2025-02-25T00:00:00.000Z" title="Created 2025-02-25 00:00:00">2025-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course"><img src="/images/CertificationsD%C3%AEplomes/introduction-cybersecurity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Introduction à la cyber sécurité par Cisco - Course"/></a><div class="content"><a class="title" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course">Introduction à la cyber sécurité par Cisco - Course</a><time datetime="2024-12-25T00:00:00.000Z" title="Created 2024-12-25 00:00:00">2024-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/21/Projet-Picloud/" title="RaspiCloud - Projet"><img src="/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RaspiCloud - Projet"/></a><div class="content"><a class="title" href="/2024/11/21/Projet-Picloud/" title="RaspiCloud - Projet">RaspiCloud - Projet</a><time datetime="2024-11-21T00:00:00.000Z" title="Created 2024-11-21 00:00:00">2024-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Allen Jolan</div><div class="footer_custom_text">Bonjour, Bienvenue sur mon <a target="_blank" rel="noopener" href="https://jolan.allen.github.io/">Porte folio</a> !</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.3.5"></script><script src="/js/main.js?v=5.3.5"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/click-show-text.min.js" data-mobile="false" data-text="Linux,sudo rm -rf,Jolan,administrator,Allen,ThePrintor,Python,C++,Cyber,Golang,( ͡° ͜ʖ ͡°)" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
