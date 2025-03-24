@@ -101,7 +101,7 @@ theme: butterfly
 
 deploy:
   type: git
-  repo: https://github.com/jolanallen/jolanallen.github.io.git
+  repo: git@github.com:jolanallen/blog.git
   branch: gh-pages
   message: "Site updated: {{ now('YY-MM-DD HH:mm:ss') }}"
   

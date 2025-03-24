@@ -10,11 +10,11 @@ top_img: /images/cyberpunk-red.jpg
 toc: true
 toc_number: true
 ---
-### Introduction
+## Introduction
 
 Le challenge **"Redeemer"** sur Hack The Box nous amène à interagir avec un service Redis sur un serveur à distance. Redis est un **système de gestion de base de données en mémoire**, utilisé principalement pour la mise en cache de données et la gestion de données temporaires. L'objectif de ce challenge est d'exploiter un serveur Redis pour obtenir un flag.
 
-### Étape 1: Identifier le Port Ouvert
+## Étape 1: Identifier le Port Ouvert
 
 La première étape consiste à déterminer quel port est ouvert sur la machine cible. Nous avons utilisé **Nmap** pour scanner les ports :
 
@@ -123,7 +123,7 @@ La valeur de la clé **flag** est le flag que nous recherchions :
 
 ```
 
-### Conclusion
+# Conclusion
 
 Dans ce challenge, nous avons utilisé **Nmap** pour découvrir le port ouvert, identifié le service **Redis** qui y était exécuté, et utilisé **redis-cli** pour interagir avec le serveur Redis. En explorant les clés stockées dans Redis, nous avons récupéré le **flag** qui était caché dans la clé **flag**.
 

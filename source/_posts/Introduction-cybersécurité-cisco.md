@@ -1,7 +1,7 @@
 ---
-title: Introduction à la cyber sécurité par Cisco - Course
+title: Introduction à la cyber sécurité par Cisco - Cours
 date: 2024-12-25
-tags: [certification, Cisco]
+tags: [Course, Cisco]
 categories: CertificationsDiplomes
 keywords: 'Cisco, Cyber Security'
 description: Cours d'introduction à la cyber sécurité - Cisco 

@@ -4,14 +4,14 @@ date: 2025-02-25
 tags: [HackTheBox, SMB, VeryEasy]
 categories: writeups
 keywords: 'SMB Hack the box'
-description: Box Starting Point - Hack The Box 
+description: découverte du protocol SMB (server message block pour le partage de fichiers)
 cover: images/writeups/Dancing/image.png
 top_img: /images/cyberpunk-red.jpg
 toc: true
 toc_number: true
 ---
 
-#### Introduction
+### Introduction
 Le **protocole SMB (Server Message Block)** est un **protocole de communication client-serveur** principalement utilisé pour le **partage de fichiers** et d'autres ressources sur un réseau. Il permet aux applications de lire et d'écrire dans des fichiers et de demander des services auprès de programmes serveurs, notamment sur des systèmes d'exploitation Windows. SMB est aussi utilisé pour accéder à des ressources partagées comme des **systèmes de fichiers**, **imprimantes**, **ports série**, et plus encore.
 
 #### Vue d'ensemble du protocole SMB

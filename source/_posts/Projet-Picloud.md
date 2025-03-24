@@ -3,8 +3,8 @@ title: RaspiCloud - Projet
 date: 2024-11-21
 tags: [Cloud, Nextcloud, Raspberry]
 categories: Projets
-keywords: 'Cisco, Cyber Security'
-description: I ...
+keywords: ''
+description: Projet cloud personnel à la maison sur un raspberry pi evec nextcloud
 cover: /images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg
 top_img: /images/cyberpunk-red.jpg
 toc: true
@@ -17,7 +17,6 @@ toc_number: true
 **B1 Cybersécurité**  
 [LinkedIn](https://www.linkedin.com/in/jolan-allen)
 
----
 
 ## Table des Matières
 
@@ -87,7 +86,7 @@ Un stockage **RAID 5** peut être envisagé pour assurer la redondance des donn�
 4. Insérer la carte SD, brancher l'alimentation et suivre l'installation.
 
 ---
-
+![cablage](/images/projects/RaspCloud/t80125952.jpg)
 ## Configuration de l'accès SSH
 
 1. Activer SSH via `raspi-config` ou en créant un fichier `ssh` vide sur la carte SD.
@@ -102,7 +101,7 @@ Un stockage **RAID 5** peut être envisagé pour assurer la redondance des donn�
 4. Générer et copier une clé SSH :
    ```bash
    ssh-keygen
-   ssh-copy-id pi@192.168.1.X
+   ssh-copy-id Theprintor@192.168.1.X
    ```
 
 ---
