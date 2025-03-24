@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>RaspiCloud - Projet | Allen Jolan</title><meta name="author" content="Allen Jolan"><meta name="copyright" content="Allen Jolan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="I ...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RaspiCloud - Projet">
+<meta property="og:url" content="https://jolanallen.github.io/2024/11/21/Projet-Picloud/index.html">
+<meta property="og:site_name" content="Allen Jolan">
+<meta property="og:description" content="I ...">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jolanallen.github.io/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg">
+<meta property="article:published_time" content="2024-11-21T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-24T07:28:22.262Z">
+<meta property="article:author" content="Allen Jolan">
+<meta property="article:tag" content="Cloud">
+<meta property="article:tag" content="Nextcloud">
+<meta property="article:tag" content="Raspberry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jolanallen.github.io/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "RaspiCloud - Projet",
+  "url": "https://jolanallen.github.io/2024/11/21/Projet-Picloud/",
+  "image": "https://jolanallen.github.io/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg",
+  "datePublished": "2024-11-21T00:00:00.000Z",
+  "dateModified": "2025-03-24T07:28:22.262Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Allen Jolan",
+      "url": "https://jolanallen.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://jolanallen.github.io/2024/11/21/Projet-Picloud/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.3.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'RaspiCloud - Projet',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/writeups/"><i class="fa-fw fas fa-folder-open"></i><span> Writeups</span></a></div><div class="menus_item"><a class="site-page" href="/categories/Projets/"><i class="fa-fw fas fa-folder-open"></i><span> Projects</span></a></div><div class="menus_item"><a class="site-page" href="/categories/CertificationsDiplomes/"><i class="fa-fw fas fa-folder-open"></i><span> Certifications</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About of Me</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/cyberpunk-red.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Allen Jolan</span></a><a class="nav-page-title" href="/"><span class="site-name">RaspiCloud - Projet</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/writeups/"><i class="fa-fw fas fa-folder-open"></i><span> Writeups</span></a></div><div class="menus_item"><a class="site-page" href="/categories/Projets/"><i class="fa-fw fas fa-folder-open"></i><span> Projects</span></a></div><div class="menus_item"><a class="site-page" href="/categories/CertificationsDiplomes/"><i class="fa-fw fas fa-folder-open"></i><span> Certifications</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About of Me</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">RaspiCloud - Projet</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-11-21T00:00:00.000Z" title="Created 2024-11-21 00:00:00">2024-11-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-03-24T07:28:22.262Z" title="Updated 2025-03-24 07:28:22">2025-03-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Projets/">Projets</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Livrables-Projet-Linux"><a href="#Livrables-Projet-Linux" class="headerlink" title="Livrables Projet Linux"></a>Livrables Projet Linux</h1><h2 id="Realise-par"><a href="#Realise-par" class="headerlink" title="Réalisé par"></a>Réalisé par</h2><p><strong>Allen Jolan</strong><br><strong>B1 Cybersécurité</strong><br><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jolan-allen">LinkedIn</a></p>
+<hr>
+<h2 id="Table-des-Matieres"><a href="#Table-des-Matieres" class="headerlink" title="Table des Matières"></a>Table des Matières</h2><ul>
+<li><a href="#livrables-projet-linux">Livrables Projet Linux</a><ul>
+<li><a href="#r%C3%A9alis%C3%A9-par">Réalisé par</a></li>
+<li><a href="#table-des-mati%C3%A8res">Table des Matières</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#pr%C3%A9requis">Prérequis</a><ul>
+<li><a href="#mat%C3%A9riel-recommand%C3%A9-">Matériel recommandé :</a></li>
+</ul>
+</li>
+<li><a href="#installation-de-raspbian">Installation de Raspbian</a></li>
+<li><a href="#configuration-de-lacc%C3%A8s-ssh">Configuration de l’accès SSH</a></li>
+<li><a href="#s%C3%A9curisation-du-raspberry-pi">Sécurisation du Raspberry Pi</a><ul>
+<li><a href="#1-suppression-de-lutilisateur-pi">1. Suppression de l’utilisateur <code>pi</code></a></li>
+<li><a href="#2-changement-du-port-ssh">2. Changement du port SSH</a></li>
+<li><a href="#3-installation-de-fail2ban">3. Installation de Fail2Ban</a></li>
+<li><a href="#4-d%C3%A9sactivation-de-lauthentification-par-mot-de-passe">4. Désactivation de l’authentification par mot de passe</a></li>
+</ul>
+</li>
+<li><a href="#installation-physique-du-raspberry-pi">Installation physique du Raspberry Pi</a></li>
+<li><a href="#configuration-du-r%C3%A9seau">Configuration du réseau</a></li>
+<li><a href="#mise-en-place-dun-pare-feu-ufw">Mise en place d’un pare-feu (UFW)</a></li>
+<li><a href="#acc%C3%A8s-%C3%A0-distance-via-vpn">Accès à distance via VPN</a></li>
+<li><a href="#installation-du-serveur-lamp">Installation du serveur LAMP</a></li>
+<li><a href="#installation-et-configuration-de-nextcloud">Installation et configuration de Nextcloud</a></li>
+<li><a href="#s%C3%A9curisation-avec-ssltls">Sécurisation avec SSL&#x2F;TLS</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#sources">Sources</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Ce projet détaille la mise en place complète d’un <strong>cloud personnel sécurisé</strong> sur un Raspberry Pi. Il couvre les étapes essentielles, depuis l’installation et la configuration, jusqu’à la sécurisation avancée du système.</p>
+<p>L’objectif est de :</p>
+<ul>
+<li>Installer et configurer <strong>Raspbian</strong>.</li>
+<li>Mettre en place un accès <strong>SSH sécurisé</strong>.</li>
+<li>Configurer le <strong>réseau, pare-feu et VPN</strong>.</li>
+<li>Déployer un <strong>serveur LAMP</strong> et <strong>Nextcloud</strong>.</li>
+<li>Sécuriser les échanges avec un <strong>certificat SSL&#x2F;TLS</strong>.</li>
+</ul>
+<p>Ce projet vise avant tout l’apprentissage et l’acquisition de compétences en <strong>cybersécurité et administration système</strong>.</p>
+<hr>
+<h2 id="Prerequis"><a href="#Prerequis" class="headerlink" title="Prérequis"></a>Prérequis</h2><h3 id="Materiel-recommande"><a href="#Materiel-recommande" class="headerlink" title="Matériel recommandé :"></a>Matériel recommandé :</h3><ul>
+<li><strong>Raspberry Pi 4</strong> (2Go RAM minimum) ou <strong>Pi 5</strong> (8Go recommandé)</li>
+<li><strong>Alimentation</strong> 5V 3A</li>
+<li><strong>Carte microSD</strong> (16Go minimum, 32Go recommandé)</li>
+<li><strong>Clavier, écran et câble HDMI</strong></li>
+<li><strong>Connexion Internet stable</strong></li>
+<li><strong>Stockage SSD externe</strong> recommandé pour de meilleures performances</li>
+</ul>
+<p>Un stockage <strong>RAID 5</strong> peut être envisagé pour assurer la redondance des données.</p>
+<hr>
+<h2 id="Installation-de-Raspbian"><a href="#Installation-de-Raspbian" class="headerlink" title="Installation de Raspbian"></a>Installation de Raspbian</h2><ol>
+<li>Télécharger l’image <strong>Raspberry Pi OS</strong> depuis le site officiel.</li>
+<li>Vérifier l’intégrité avec <strong>SHA256</strong> :<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sha256sum</span> &lt;image_raspbian.img&gt;</span><br></pre></td></tr></table></figure></li>
+<li>Graver l’image sur la carte SD avec <strong>Raspberry Pi Imager</strong>.</li>
+<li>Insérer la carte SD, brancher l’alimentation et suivre l’installation.</li>
+</ol>
+<hr>
+<h2 id="Configuration-de-l’acces-SSH"><a href="#Configuration-de-l’acces-SSH" class="headerlink" title="Configuration de l’accès SSH"></a>Configuration de l’accès SSH</h2><ol>
+<li>Activer SSH via <code>raspi-config</code> ou en créant un fichier <code>ssh</code> vide sur la carte SD.</li>
+<li>Installer OpenSSH Server :<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br></pre></td></tr></table></figure></li>
+<li>Trouver l’adresse IP du Raspberry Pi :<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure></li>
+<li>Générer et copier une clé SSH :<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br><span class="line">ssh-copy-id pi@192.168.1.X</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="Securisation-du-Raspberry-Pi"><a href="#Securisation-du-Raspberry-Pi" class="headerlink" title="Sécurisation du Raspberry Pi"></a>Sécurisation du Raspberry Pi</h2><h3 id="1-Suppression-de-l’utilisateur-pi"><a href="#1-Suppression-de-l’utilisateur-pi" class="headerlink" title="1. Suppression de l’utilisateur pi"></a>1. Suppression de l’utilisateur <code>pi</code></h3>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> deluser pi --remove-home</span><br></pre></td></tr></table></figure>
+<h3 id="2-Changement-du-port-SSH"><a href="#2-Changement-du-port-SSH" class="headerlink" title="2. Changement du port SSH"></a>2. Changement du port SSH</h3>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"><span class="comment"># Modifier &#x27;Port 22&#x27; en &#x27;Port 2222&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Installation-de-Fail2Ban"><a href="#3-Installation-de-Fail2Ban" class="headerlink" title="3. Installation de Fail2Ban"></a>3. Installation de Fail2Ban</h3>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install fail2ban</span><br></pre></td></tr></table></figure>
+<h3 id="4-Desactivation-de-l’authentification-par-mot-de-passe"><a href="#4-Desactivation-de-l’authentification-par-mot-de-passe" class="headerlink" title="4. Désactivation de l’authentification par mot de passe"></a>4. Désactivation de l’authentification par mot de passe</h3>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/ssh/sshd_config</span><br><span class="line"><span class="comment"># Modifier &#x27;PasswordAuthentication yes&#x27; en &#x27;PasswordAuthentication no&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Installation-physique-du-Raspberry-Pi"><a href="#Installation-physique-du-Raspberry-Pi" class="headerlink" title="Installation physique du Raspberry Pi"></a>Installation physique du Raspberry Pi</h2><ul>
+<li>Connexion filaire à la <strong>box Internet</strong>.</li>
+<li>Attribution d’une <strong>IP fixe</strong> via l’interface de la box.</li>
+</ul>
+<hr>
+<h2 id="Configuration-du-reseau"><a href="#Configuration-du-reseau" class="headerlink" title="Configuration du réseau"></a>Configuration du réseau</h2><ul>
+<li>Ouverture des <strong>ports essentiels</strong> (SSH, HTTP, HTTPS, VPN).</li>
+<li>Redirection des flux vers le Raspberry Pi.</li>
+</ul>
+<hr>
+<h2 id="Mise-en-place-d’un-pare-feu-UFW"><a href="#Mise-en-place-d’un-pare-feu-UFW" class="headerlink" title="Mise en place d’un pare-feu (UFW)"></a>Mise en place d’un pare-feu (UFW)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install ufw</span><br><span class="line"><span class="built_in">sudo</span> ufw allow 2222/tcp  <span class="comment"># SSH sécurisé</span></span><br><span class="line"><span class="built_in">sudo</span> ufw allow 1194/udp  <span class="comment"># VPN</span></span><br><span class="line"><span class="built_in">sudo</span> ufw allow 80,443/tcp  <span class="comment"># HTTP/HTTPS</span></span><br><span class="line"><span class="built_in">sudo</span> ufw default deny incoming</span><br><span class="line"><span class="built_in">sudo</span> ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Acces-a-distance-via-VPN"><a href="#Acces-a-distance-via-VPN" class="headerlink" title="Accès à distance via VPN"></a>Accès à distance via VPN</h2><p>Installation d’<strong>OpenVPN</strong> :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh -O openvpn-install.sh</span><br><span class="line"><span class="built_in">sudo</span> bash openvpn-install.sh</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Installation-du-serveur-LAMP"><a href="#Installation-du-serveur-LAMP" class="headerlink" title="Installation du serveur LAMP"></a>Installation du serveur LAMP</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install apache2 mysql-server php php-mysql</span><br></pre></td></tr></table></figure>
+
+<p>Vérification via <code>http://localhost</code>.</p>
+<hr>
+<h2 id="Installation-et-configuration-de-Nextcloud"><a href="#Installation-et-configuration-de-Nextcloud" class="headerlink" title="Installation et configuration de Nextcloud"></a>Installation et configuration de Nextcloud</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/</span><br><span class="line">wget https://download.nextcloud.com/server/releases/nextcloud.zip</span><br><span class="line">unzip nextcloud.zip</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R www-data:www-data nextcloud</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 755 nextcloud</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Securisation-avec-SSL-TLS"><a href="#Securisation-avec-SSL-TLS" class="headerlink" title="Sécurisation avec SSL&#x2F;TLS"></a>Sécurisation avec SSL&#x2F;TLS</h2><p>Génération d’un <strong>certificat auto-signé</strong> :</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nextcloud.key -out /etc/ssl/certs/nextcloud.crt</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Ce projet a permis d’acquérir des compétences en :</p>
+<ul>
+<li><strong>Administration Linux et réseau</strong></li>
+<li><strong>Cybersécurité et protection des systèmes</strong></li>
+<li><strong>Déploiement d’un cloud personnel sécurisé</strong></li>
+</ul>
+<hr>
+<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://raspberrytips.fr/installer-serveur-vpn-raspberry-pi/">Installation d’un VPN sur Raspberry Pi</a></li>
+</ul>
+<hr>
+<p><strong>Allen Jolan - B1 Cybersécurité</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://jolanallen.github.io">Allen Jolan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://jolanallen.github.io/2024/11/21/Projet-Picloud/">https://jolanallen.github.io/2024/11/21/Projet-Picloud/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Cloud/">Cloud</a><a class="post-meta__tags" href="/tags/Nextcloud/">Nextcloud</a><a class="post-meta__tags" href="/tags/Raspberry/">Raspberry</a></div><div class="post-share"><div class="social-share" data-image="/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course"><img class="cover" src="/images/CertificationsD%C3%AEplomes/introduction-cybersecurity.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Introduction à la cyber sécurité par Cisco - Course</div></div><div class="info-2"><div class="info-item-1">Introduction à la Cybersécurité par Cisco </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Allen Jolan</div><div class="author-info-description">Étudiant en cybersécurité, passionné par la sécurité des systèmes et l'informatique. Actuellement en bachelor de cybersécurité, j'aime apprendre constamment et relever de nouveaux défis pour approfondir mes compétences.</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/jolanallen" target="_blank" title="Github"><i class="fab fa-github" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/jolan-allen/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Bienvenu dans mon Porte folio ! Je vais partager mes write-ups sur des plateformes comme Hack The Box, TryHackMe, ainsi que mes projets personnels et mes certifications. Vous trouverez aussi une section "About Me" pour découvrir mon parcours et mes passions.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Livrables-Projet-Linux"><span class="toc-number">1.</span> <span class="toc-text">Livrables Projet Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Realise-par"><span class="toc-number">1.1.</span> <span class="toc-text">Réalisé par</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Table-des-Matieres"><span class="toc-number">1.2.</span> <span class="toc-text">Table des Matières</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.3.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequis"><span class="toc-number">1.4.</span> <span class="toc-text">Prérequis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Materiel-recommande"><span class="toc-number">1.4.1.</span> <span class="toc-text">Matériel recommandé :</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation-de-Raspbian"><span class="toc-number">1.5.</span> <span class="toc-text">Installation de Raspbian</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration-de-l%E2%80%99acces-SSH"><span class="toc-number">1.6.</span> <span class="toc-text">Configuration de l’accès SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Securisation-du-Raspberry-Pi"><span class="toc-number">1.7.</span> <span class="toc-text">Sécurisation du Raspberry Pi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Suppression-de-l%E2%80%99utilisateur-pi"><span class="toc-number">1.7.1.</span> <span class="toc-text">1. Suppression de l’utilisateur pi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Changement-du-port-SSH"><span class="toc-number">1.7.2.</span> <span class="toc-text">2. Changement du port SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Installation-de-Fail2Ban"><span class="toc-number">1.7.3.</span> <span class="toc-text">3. Installation de Fail2Ban</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Desactivation-de-l%E2%80%99authentification-par-mot-de-passe"><span class="toc-number">1.7.4.</span> <span class="toc-text">4. Désactivation de l’authentification par mot de passe</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation-physique-du-Raspberry-Pi"><span class="toc-number">1.8.</span> <span class="toc-text">Installation physique du Raspberry Pi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration-du-reseau"><span class="toc-number">1.9.</span> <span class="toc-text">Configuration du réseau</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mise-en-place-d%E2%80%99un-pare-feu-UFW"><span class="toc-number">1.10.</span> <span class="toc-text">Mise en place d’un pare-feu (UFW)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Acces-a-distance-via-VPN"><span class="toc-number">1.11.</span> <span class="toc-text">Accès à distance via VPN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation-du-serveur-LAMP"><span class="toc-number">1.12.</span> <span class="toc-text">Installation du serveur LAMP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation-et-configuration-de-Nextcloud"><span class="toc-number">1.13.</span> <span class="toc-text">Installation et configuration de Nextcloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Securisation-avec-SSL-TLS"><span class="toc-number">1.14.</span> <span class="toc-text">Sécurisation avec SSL&#x2F;TLS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">1.15.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sources"><span class="toc-number">1.16.</span> <span class="toc-text">Sources</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box"><img src="/images/writeups/REDEEMER/image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Starting Point Redeemer - Hack the Box"/></a><div class="content"><a class="title" href="/2025/03/05/Redeemer/" title="Starting Point Redeemer - Hack the Box">Starting Point Redeemer - Hack the Box</a><time datetime="2025-03-05T00:00:00.000Z" title="Created 2025-03-05 00:00:00">2025-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/25/Dancing/" title="Starting Point Dancing - Hack the Box"><img src="/images/writeups/Dancing/image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Starting Point Dancing - Hack the Box"/></a><div class="content"><a class="title" href="/2025/02/25/Dancing/" title="Starting Point Dancing - Hack the Box">Starting Point Dancing - Hack the Box</a><time datetime="2025-02-25T00:00:00.000Z" title="Created 2025-02-25 00:00:00">2025-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course"><img src="/images/CertificationsD%C3%AEplomes/introduction-cybersecurity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Introduction à la cyber sécurité par Cisco - Course"/></a><div class="content"><a class="title" href="/2024/12/25/Introduction-cybers%C3%A9curit%C3%A9-cisco/" title="Introduction à la cyber sécurité par Cisco - Course">Introduction à la cyber sécurité par Cisco - Course</a><time datetime="2024-12-25T00:00:00.000Z" title="Created 2024-12-25 00:00:00">2024-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/21/Projet-Picloud/" title="RaspiCloud - Projet"><img src="/images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RaspiCloud - Projet"/></a><div class="content"><a class="title" href="/2024/11/21/Projet-Picloud/" title="RaspiCloud - Projet">RaspiCloud - Projet</a><time datetime="2024-11-21T00:00:00.000Z" title="Created 2024-11-21 00:00:00">2024-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Allen Jolan</div><div class="footer_custom_text">Bonjour, Bienvenue sur mon <a target="_blank" rel="noopener" href="https://jolan.allen.github.io/">Porte folio</a> !</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.3.5"></script><script src="/js/main.js?v=5.3.5"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/click-show-text.min.js" data-mobile="false" data-text="Linux,sudo rm -rf,Jolan,administrator,Allen,ThePrintor,Python,C++,Cyber,Golang,( ͡° ͜ʖ ͡°)" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
