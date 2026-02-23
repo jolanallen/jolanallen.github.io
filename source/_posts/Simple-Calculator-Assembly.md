@@ -1,6 +1,6 @@
 ---
 title: Calculatrice en Assembleur x86_64 - Projet Bas Niveau
-date: 2026-02-23
+date: 2026-01-07
 tags: [Assembly, x86_64, Linux, C, Low-Level]
 categories: Projets
 keywords: 'Assembly, x86_64, NASM, C, Calculator, Linux Syscalls'
