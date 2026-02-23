@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Allen Jolan
-subtitle: ''
-description: Étudiant en cybersécurité, passionné par la sécurité des systèmes et l'informatique. Actuellement en bachelor de cybersécurité, j'aime apprendre constamment et relever de nouveaux défis pour approfondir mes compétences.
-keywords:
-author: Allen Jolan
-language: en
-timezone: UTC
+title: Jolan Allen (ThePrintor) - Portfolio Cybersécurité
+subtitle: 'Expertise en Sécurité Offensive & Administration Systèmes'
+description: Jolan Allen (ThePrintor) - Étudiant en cybersécurité, passionné par la sécurité des systèmes et l'informatique. Découvrez mes projets, mes certifications et mes write-ups (HTB, TryHackMe).
+keywords: Jolan Allen, ThePrintor, Cybersécurité, Pentest, SOC, Réseau, Portfolio, Hack The Box, Writeups, Assembly, Linux, Jolan Allen Cybersécurité, ThePrintor Security
+author: Jolan Allen (ThePrintor)
+language: fr
+timezone: Europe/Paris
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

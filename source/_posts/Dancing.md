@@ -3,8 +3,8 @@ title: Starting Point Dancing - Hack the Box
 date: 2025-02-25
 tags: [HackTheBox, SMB, VeryEasy]
 categories: writeups
-keywords: 'SMB Hack the box'
-description: découverte du protocol SMB (server message block pour le partage de fichiers)
+keywords: 'Hack The Box, Dancing, SMB, Writeup, Cybersécurité, Pentest, smbclient, Nmap'
+description: Apprenez à exploiter le protocole SMB sur la machine Dancing de Hack The Box avec Nmap et smbclient.
 cover: images/writeups/Dancing/image.png
 top_img: /images/cyberpunk-red.jpg
 toc: true
@@ -110,8 +110,8 @@ Le fichier **flag.txt** a été téléchargé avec succès, et son contenu a ét
 #### Contenu du Flag
 Le contenu du **flag.txt** est :
 
-```
-5f61c10dffbc77a704d76016a22f1664
+```shell
+5f61c10dffbc77a704d7601**********
 ```
 
 ### Conclusion

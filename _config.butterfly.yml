@@ -37,7 +37,7 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /imgages/avatar.png
+favicon: /images/avatar.png
 
 # Avatar (頭像)
 avatar:
@@ -206,7 +206,7 @@ footer:
   owner:
     enable: true
     since: 2024
-  custom_text: Bonjour, Bienvenue sur mon <a href="https://jolan.allen.github.io/">Porte folio</a> !
+  custom_text: Bonjour, Bienvenue sur mon <a href="https://jolanallen.github.io/">Portfolio</a> !
   copyright: false # Copyright of theme and framework
 
 # aside 
@@ -224,15 +224,15 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 
+    description: Jolan Allen (ThePrintor) - Étudiant en Cybersécurité spécialisé en Pentest & Infra.
     button:
-      enable: false
+      enable: true
       icon: fab fa-linkedin
       text: Follow Me
       link: https://www.linkedin.com/in/jolan-allen/
   card_announcement:
     enable: true
-    content: Bienvenu dans mon Porte folio ! Je vais partager mes write-ups sur des plateformes comme Hack The Box, TryHackMe, ainsi que mes projets personnels et mes certifications. Vous trouverez aussi une section "About Me" pour découvrir mon parcours et mes passions.
+    content: Bienvenue sur le portfolio de Jolan Allen (ThePrintor) ! Write-ups, projets et cybersécurité.
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all

@@ -3,8 +3,8 @@ title: Starting Point Redeemer - Hack the Box
 date: 2025-03-05
 tags: [HackTheBox, Redis, DataBases, VeryEasy]
 categories: writeups
-keywords: 'Redis Hack the box'
-description: Box Starting point  - Hack the box 
+keywords: 'Hack The Box, Redeemer, Redis, Writeup, Cybersécurité, Pentest, redis-cli'
+description: Guide pour exploiter un service Redis non sécurisé sur la machine Redeemer de Hack The Box.
 cover: images/writeups/REDEEMER/image.png
 top_img: /images/cyberpunk-red.jpg
 toc: true
