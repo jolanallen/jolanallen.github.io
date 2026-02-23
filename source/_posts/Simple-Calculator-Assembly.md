@@ -5,8 +5,8 @@ tags: [Assembly, x86_64, Linux, C, Low-Level]
 categories: Projets
 keywords: 'Assembly, x86_64, NASM, C, Calculator, Linux Syscalls'
 description: Exploration de l'assembleur x86_64 sur Linux à travers la création d'une calculatrice hybride C/Assembleur.
-cover: /images/Assembly.png
-top_img: /images/Assembly.png
+cover: /images/projects/Asm_calc/Assembly.png
+top_img: /images/projects/Asm_calc/Assembly.png
 toc: true
 ---
 
