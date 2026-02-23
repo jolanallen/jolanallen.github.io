@@ -224,7 +224,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: Jolan Allen (ThePrintor) - Étudiant en Cybersécurité spécialisé en Pentest & Infra.
+    description: Jolan Allen (ThePrintor) - Étudiant en Cybersécurité
     button:
       enable: true
       icon: fab fa-linkedin
