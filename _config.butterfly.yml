@@ -206,7 +206,7 @@ footer:
   owner:
     enable: true
     since: 2024
-  custom_text: Bonjour, Bienvenue sur mon <a href="https://jolanallen.github.io/">Portfolio</a> !
+  custom_text: Bonjour, Bienvenue sur mon <a href="https://www.kustodes.me/">Portfolio</a> !
   copyright: false # Copyright of theme and framework
 
 # aside 

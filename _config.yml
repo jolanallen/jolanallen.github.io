@@ -13,7 +13,7 @@ timezone: Europe/Paris
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://jolanallen.github.io
+url: https://www.kustodes.me
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -108,9 +108,9 @@ deploy:
 
 seo:
   type: 'Person'
-  title: 'Jolan Allen - Portfolio'
-  description: 'Projets, blog et wites-ups de Jolan Allen.'
-  url: 'https://jolanallen.github.io'
+  title: 'Jolan Allen (ThePrintor) - Portfolio Cybersécurité'
+  description: 'Jolan Allen (ThePrintor) - Portfolio en cybersécurité, pentest et administration système. Projets, write-ups et expertise technique.'
+  url: 'https://www.kustodes.me'
   author: 'Jolan Allen'
-  twitter_card: false
-  keywords: 'Jolan Allen, cybersécurité, portfolio, blog, hacking'
+  twitter_card: true
+  keywords: 'Jolan Allen, ThePrintor, Kustodes, Cybersécurité, Pentest, SOC, Portfolio, Blog, Hacking'

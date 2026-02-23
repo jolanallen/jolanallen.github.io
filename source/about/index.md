@@ -7,12 +7,12 @@ description: Jolan Allen (ThePrintor), étudiant en Bachelor Cybersécurité à 
 top_img: /images/cyberpunk-red.jpg
 ---
 
-# 🚀 Recherche Alternance Cybersécurité (36 mois)
+#  Recherche Alternance Cybersécurité (36 mois)
 **Disponibilité : Juillet 2026** | **Rythme : 1 semaine école / 2 semaines entreprise**
 
 Je m'appelle **Jolan Allen**, alias **ThePrintor**. Actuellement en **Bachelor 2 Cybersécurité** à Montpellier Ynov Campus, je me prépare à intégrer le monde professionnel via un cycle en alternance couvrant ma 3ème année de Bachelor et mon Master (36 mois).
 
-### 🛡️ Expériences Professionnelles
+###  Expériences Professionnelles
 
 **Stagiaire Cybersécurité @ Emvista** *(10/2025 - Présent)*
 - **GRC & Conformité** : Analyse d'écarts et mise en conformité face aux exigences clients.
@@ -25,7 +25,7 @@ Je m'appelle **Jolan Allen**, alias **ThePrintor**. Actuellement en **Bachelor 2
 
 ---
 
-### 🎓 Formations & Certifications
+###  Formations & Certifications
 
 - **Certification C3SA** (Certified Cyber Security Analyst) : En cours de préparation.
 - **Bachelor Cybersécurité** (Ynov Montpellier) : OSINT, Administration Linux/Windows, Développement bas niveau (Assembleur x86-64, C).
@@ -33,7 +33,7 @@ Je m'appelle **Jolan Allen**, alias **ThePrintor**. Actuellement en **Bachelor 2
 
 ---
 
-### 💻 Compétences Techniques
+###  Compétences Techniques
 
 | Domaine | Technologies |
 | :--- | :--- |
@@ -44,7 +44,7 @@ Je m'appelle **Jolan Allen**, alias **ThePrintor**. Actuellement en **Bachelor 2
 
 ---
 
-### 📥 Mon Curriculum Vitae
+###  Mon Curriculum Vitae
 
 Pour plus de détails sur mon parcours, vous pouvez consulter ou télécharger mon CV complet ci-dessous :
 
@@ -56,11 +56,11 @@ Pour plus de détails sur mon parcours, vous pouvez consulter ou télécharger m
 
 <br>
 
-[![Aperçu du CV de Jolan Allen](/images/AboutOfMe/CV.png)](/pdf/Allen_Jolan_cv_alternance.pdf)
+[![Aperçu du CV de Jolan Allen](/images/AboutOfMe/CV.jpg)](/pdf/Allen_Jolan_cv_alternance.pdf)
 
 ---
 
-### 🎯 Objectif
+###  Objectif
 Passionné par la résilience des systèmes d'information, mon objectif est de m'investir durablement dans une équipe technique pour relever des défis liés à l'infrastructure et à la sécurité offensive. 
 
 **Vous recherchez un profil proactif, rigoureux et technique ? Contactez-moi sur [LinkedIn](https://www.linkedin.com/in/jolan-allen/) !**
