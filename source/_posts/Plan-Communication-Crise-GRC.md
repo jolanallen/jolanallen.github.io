@@ -1,59 +1,53 @@
 ---
-title: Introduction à la GRC - Mes premières notions de Communication de Crise
+title: Introduction à la GRC - Ma démarche pour élaborer un Plan de Communication de Crise
 date: 2026-02-23
-tags: [GRC, Communication de Crise, Gouvernance, Apprentissage]
+tags: [GRC, Communication de Crise, Gouvernance, Apprentissage, Résilience]
 categories: GRC
-keywords: 'Plan de Communication de Crise, PCC, GRC débutant, Apprentissage cybersécurité, RGPD'
-description: Initiation à la gestion de crise cyber. Retour sur mon travail d'élaboration d'un Plan de Communication de Crise (PCC) et les notions clés apprises.
+keywords: 'Plan de Communication de Crise, PCC, GRC débutant, Apprentissage cybersécurité, RGPD, Olvid, RACI'
+description: Analyse de ma démarche lors de la création d'un Plan de Communication de Crise (PCC) pour une TPE/PME. Notions de gouvernance, de seuils d'activation et de conformité légale.
 cover: /images/projects/PCC/PCC.png
 top_img: /images/projects/PCC/PCC.png
 toc: true
 ---
 
-En étudiant la cybersécurité, on apprend vite que la technique ne fait pas tout. Quand une attaque réussit, il faut savoir réagir et surtout savoir quoi dire. Dans le cadre de mes cours en GRC (Gouvernance, Risque et Conformité), j'ai travaillé sur la création d'un Plan de Communication de Crise (PCC).
+En cybersécurité, la technique est le bouclier, mais l'organisation est la colonne vertébrale. Lors de mes travaux en GRC (Gouvernance, Risque et Conformité), j'ai conçu un Plan de Communication de Crise (PCC) complet pour une organisation fictive nommée FAKESEC.
 
-Ce n'est pas un guide d'expert, mais plutôt un résumé des notions fondamentales que j'ai découvertes et appliquées pour structurer la réponse d'une organisation.
+Ce projet m'a permis de structurer une réponse ordonnée face à l'imprévu. Voici les étapes clés de ma démarche et les notions fondamentales que j'ai mises en pratique.
 
-## Quelques principes de base appris
+## Identifier le basculement : de l'incident à la crise
 
-La communication de crise repose sur des réflexes simples mais essentiels que j'ai essayé d'intégrer dans mon projet :
+La première étape de mon travail a été de définir quand déclencher le plan. Un incident technique (un serveur qui tombe) n'est pas forcément une crise. Pour qualifier la situation, j'ai mis en place un arbre de décision reposant sur trois critères de criticité :
+- L'activité métier est-elle bloquée ?
+- Des données sensibles (clients, partenaires) sont-elles compromises ?
+- L'image de marque est-elle menacée ?
 
-1.  L'Unicité de la parole : Éviter que tout le monde parle en même temps. Un seul porte-parole centralise l'information pour ne pas diffuser de messages contradictoires.
-2.  L'Honnêteté technique : Ne pas chercher à cacher l'incident, mais ne communiquer que sur des faits vérifiés par l'équipe technique.
-3.  La Réactivité : Apprendre à ne pas laisser le silence s'installer, car c'est là que naissent les rumeurs.
+Dès qu'un de ces seuils est franchi, la cellule de crise est activée. Un point crucial de ma démarche a été d'imposer immédiatement l'usage de canaux de communication hors-bande via l'application Olvid. L'objectif est simple : garantir que nos échanges stratégiques ne soient pas interceptés par un attaquant qui serait encore présent sur le réseau de l'entreprise.
 
-## Organiser la réponse : La Cellule de Crise
+## Structurer la gouvernance avec une matrice RACI
 
-Pour mon projet, j'ai imaginé une structure simple avec trois rôles majeurs :
-- La Direction : Qui prend les décisions finales.
-- Le Technique (RSSI) : Qui explique ce qui se passe réellement sur le réseau.
-- La Communication : Qui prépare les messages pour les clients ou les réseaux sociaux.
+Une crise génère du stress et de la confusion. Pour éviter cela, j'ai défini les rôles de chaque intervenant via une matrice RACI (Responsible, Accountable, Consulted, Informed) :
+- Le Chef de Crise (Direction) : Il prend les décisions finales et valide la parole officielle.
+- Le RSSI (Technique) : Il fournit l'état réel des dégâts et supervise la remédiation technique.
+- Le Responsable Communication : Il prépare les messages et gère la relation avec les médias ou les réseaux sociaux.
 
-J'ai utilisé une matrice RACI (un outil que j'ai découvert en GRC) pour définir clairement qui fait quoi. C'est très utile pour ne pas se marcher sur les pieds dans l'urgence.
+L'un des principes de base que j'ai retenus est l'unicité de la parole : une seule voix doit s'exprimer pour éviter les contradictions qui détruisent la confiance des clients.
 
-## Quand déclencher le plan ?
+## Adapter la réponse : les paliers de visibilité médiatique
 
-Un point important de mon travail a été de définir un arbre de décision. L'idée est de se poser des questions simples pour savoir si l'incident est grave :
-- Est-ce que les outils de travail sont bloqués ?
-- Est-ce que des données clients ont fuité ?
-- Est-ce que cela risque de nuire à l'image de l'entreprise ?
+Tout le monde n'a pas besoin de tout savoir au même moment. Ma stratégie repose sur trois niveaux de réaction :
+- Niveau 1 (Gestion Silencieuse) : L'incident est sous contrôle et non public. On informe uniquement les clients directement impactés.
+- Niveau 2 (Réaction Ciblée) : L'incident commence à être mentionné sur les réseaux. On répond de manière factuelle et courte, en privilégiant les échanges en message privé.
+- Niveau 3 (Posture Proactive) : La crise est publique. On diffuse un communiqué officiel pour occuper le terrain médiatique et éviter que les rumeurs ne prennent le dessus.
 
-Si c'est le cas, on active le plan et on bascule sur des messageries sécurisées comme Olvid pour rester hors de portée des attaquants.
+## Intégrer les contraintes légales et le RETEX
 
-## Communiquer selon la situation
+La GRC impose de respecter des règles strictes. Dans mon plan, j'ai documenté les obligations liées au RGPD : la notification à la CNIL doit être effectuée sous 72 heures en cas de violation de données personnelles. De même, le dépôt de plainte en gendarmerie est une étape indispensable pour la prise en charge par les assurances.
 
-J'ai structuré ma réflexion en trois paliers de visibilité :
-- Niveau 1 : L'incident est discret, on informe uniquement les clients directement concernés.
-- Niveau 2 : On commence à en parler sur les réseaux, on répond calmement aux questions.
-- Niveau 3 : La crise est publique, on diffuse un communiqué officiel pour montrer que la situation est sous contrôle.
-
-## Le cadre légal (RGPD)
-
-Enfin, j'ai appris que la loi nous impose des contraintes. Par exemple, avec le RGPD, on a souvent 72 heures pour prévenir la CNIL si des données personnelles sont touchées. C'est un stress supplémentaire à intégrer dans la gestion de crise.
+Enfin, j'ai conclu ma démarche par la phase de post-crise. Une crise n'est jamais vraiment finie sans un RETEX (Retour d'Expérience) mené sous 10 jours. C'est ce moment d'analyse qui permet de transformer un échec technique en une amélioration durable de la sécurité de l'organisation.
 
 ---
 
 ### Conclusion
-Ce travail sur le Plan de Communication de Crise m'a permis de comprendre que la résilience d'une entreprise est aussi une question d'organisation. C'est une première approche de la GRC qui complète bien mon profil technique.
+L'élaboration de ce Plan de Communication de Crise m'a montré que la résilience est avant tout une question de préparation et de méthode. C'est une compétence organisationnelle qui complète mon parcours technique en cybersécurité.
 
-N'hésitez pas à me suivre sur LinkedIn pour suivre mon évolution en cybersécurité !
+N'hésitez pas à me suivre sur LinkedIn pour découvrir mes prochains projets en GRC et en sécurité offensive !
