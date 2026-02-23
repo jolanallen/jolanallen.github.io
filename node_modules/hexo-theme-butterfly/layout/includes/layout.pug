@@ -13,7 +13,29 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     !=partial('includes/loading/index', {}, {cache: true})
 
     if theme.background
-      #web_bg(style=getBgPath(theme.background))
+      if !Array.isArray(theme.background)
+        #web_bg.bg-animation(style=getBgPath(theme.background))
+      else
+        #web_bg.bg-animation
+        - const bgStyleArr = theme.background.map(getBgPath)
+        script.
+          (() => {
+            const arr = !{JSON.stringify(bgStyleArr)}
+            const webBgDiv = document.getElementById('web_bg')
+
+            const setRandomBg = () => {
+              webBgDiv.style = arr[Math.floor(Math.random() * arr.length)]
+              requestAnimationFrame(() => webBgDiv.classList.add('bg-animation'))
+            }
+
+            document.addEventListener('pjax:send', () => {
+              webBgDiv.style = ''
+              webBgDiv.classList.remove('bg-animation')
+            })
+
+            document.addEventListener('pjax:complete', setRandomBg)
+            document.addEventListener('DOMContentLoaded', setRandomBg)
+          })()
 
     !=partial('includes/sidebar', {}, {cache: true})
 

@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: 
+  logo: /images/jcartoon.png
   display_title: true
   fixed: true # fixed navigation bar
 

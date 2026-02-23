@@ -103,5 +103,14 @@ deploy:
   type: git
   repo: git@github.com:jolanallen/blog.git
   branch: gh-pages
-  message: "Site updated: {{ now('YY-MM-DD HH:mm:ss') }}"
+  message: "Site updated: {{ now('DD MM YYYY HH:mm:ss') }}"
   
+
+seo:
+  type: 'Person'
+  title: 'Jolan Allen - Portfolio'
+  description: 'Projets, blog et wites-ups de Jolan Allen.'
+  url: 'https://jolanallen.github.io'
+  author: 'Jolan Allen'
+  twitter_card: false
+  keywords: 'Jolan Allen, cybersécurité, portfolio, blog, hacking'
