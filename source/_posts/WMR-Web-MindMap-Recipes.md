@@ -1,12 +1,12 @@
 ---
 title: WMR - Centraliser et opérationnaliser le Pentest Web via des MindMaps
-date: 2026-02-23
+date: 2025-12-02
 tags: [Pentest Web, WMR, MindMap, Sécurité Offensive, Méthodologie]
 categories: Projets
 keywords: 'WMR, Web-MindMap-Recipes, Pentest Web, MindMap Pentest, Méthodologie Sécurité, Hacking Éthique, Checklist Pentest, ThePrintor'
 description: Présentation de WMR (Web-MindMap-Recipes), un projet visant à centraliser les techniques de pentest web pour optimiser le temps d'analyse et garantir une couverture exhaustive des tests.
-cover: /images/cyberpunk-red.jpg
-top_img: /images/cyberpunk-red.jpg
+cover: /images/projects/WMR/WMR.png
+top_img: /images/projects/WMR/WMR.png
 toc: true
 ---
 
