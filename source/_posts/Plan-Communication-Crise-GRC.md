@@ -5,8 +5,8 @@ tags: [GRC, Communication de Crise, Gouvernance, Apprentissage]
 categories: GRC
 keywords: 'Plan de Communication de Crise, PCC, GRC débutant, Apprentissage cybersécurité, RGPD'
 description: Initiation à la gestion de crise cyber. Retour sur mon travail d'élaboration d'un Plan de Communication de Crise (PCC) et les notions clés apprises.
-cover: /images/cyberpunk-red.jpg
-top_img: /images/cyberpunk-red.jpg
+cover: /images/projects/PCC/PCC.png
+top_img: /images/projects/PCC/PCC.png
 toc: true
 ---
 
