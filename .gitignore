@@ -1,2 +1,8 @@
-.deploy_git
-Helper.mdnode_modules/
+.deploy_git/
+public/
+node_modules/
+db.json
+*.log
+.DS_Store
+tmp/
+.vscode/
