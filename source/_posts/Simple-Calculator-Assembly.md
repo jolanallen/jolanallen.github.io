@@ -1,33 +1,44 @@
 ---
-title: Calculatrice en Assembleur x86_64 - Projet Bas Niveau
+title: Calculatrice en Assembleur x86_64 - Mes débuts dans le bas niveau
 date: 2026-01-07
 tags: [Assembly, x86_64, Linux, C, Low-Level]
 categories: Projets
 keywords: 'Assembly, x86_64, NASM, C, Calculator, Linux Syscalls'
-description: Exploration de l'assembleur x86_64 sur Linux à travers la création d'une calculatrice hybride C/Assembleur.
+description: Ma découverte de l'assembleur x86_64 sur Linux à travers la création d'une petite calculatrice hybride C/Assembleur.
 cover: /images/projects/Asm_calc/Assembly.png
 top_img: /images/projects/Asm_calc/Assembly.png
 toc: true
 ---
 
-L'assembleur est souvent perçu comme un langage complexe et intimidant. Pourtant, c'est le langage qui parle directement au processeur. Dans ce projet, j'ai voulu comprendre comment fonctionne l'assembleur et j'ai donc réalisé un petit projet simple de calculatrice en assembleur, ce qui m'a permis de m'initier à ce langage de programmation.
+# Apprivoiser l'Assembleur : Un défi personnel
+
+**Allen Jolan**  
+[LinkedIn](https://www.linkedin.com/in/jolan-allen)
+
+L'assembleur est souvent perçu comme un langage intimidant, presque mystique. Pourtant, c'est celui qui parle le plus directement au processeur. Pour lever le voile sur ce fonctionnement, je me suis lancé un petit défi : réaliser une calculatrice simple en assembleur x86_64. 
+
+Ce projet a été pour moi une véritable initiation aux mécanismes fondamentaux de l'informatique.
+
+---
 
 ## Pourquoi l'Assembleur ?
 
-Comprendre l'assembleur x86_64 sur Linux permet de saisir :
-- Comment la mémoire est gérée via la **pile (stack)**.
-- Comment les données transitent dans les **registres** (`RAX`, `RDI`, `RSI`...).
-- Comment le langage C communique avec le matériel via l'**ABI System V**.
+En tant qu'étudiant en cybersécurité, comprendre l'assembleur est indispensable. Cela permet de voir comment les données transitent réellement dans la machine :
+- **La mémoire** : Comment elle est gérée via la pile (stack).
+- **Les registres** : Ces petites cases ultra-rapides du processeur (`RAX`, `RDI`, `RSI`...).
+- **Le lien avec le C** : Comment un langage de "haut niveau" communique avec le matériel.
 
-## Architecture du Projet
+---
 
-Le projet est une calculatrice hybride :
-1. **Le Driver en C (`main.c`)** : Il gère l'interface utilisateur, la saisie des nombres et l'affichage des résultats.
-2. **Le Cœur en Assembleur (`.asm`)** : Chaque opération (addition, soustraction, multiplication, division, carré) est écrite en pur assembleur NASM.
+## Mon approche : Un projet hybride
+
+Pour ne pas me perdre dès le début, j'ai choisi une approche hybride :
+1. **Le Driver en C (`main.c`)** : Il gère l'interface, la saisie des nombres et l'affichage des résultats. C'est la partie "facile".
+2. **Le Cœur en Assembleur (`.asm`)** : Chaque opération mathématique (addition, soustraction, multiplication, division) est écrite en pur assembleur NASM.
 
 ### Exemple : L'Addition
 
-En assembleur x86_64, pour additionner deux nombres passés par un programme en C, on utilise la convention d'appel Linux. Le premier nombre arrive dans `RDI` et le deuxième dans `RSI`.
+En assembleur x86_64, on utilise des registres pour passer les arguments. Le premier nombre arrive dans `RDI` et le deuxième dans `RSI`. Le résultat est renvoyé via `RAX`.
 
 ```nasm
 global addition
@@ -37,27 +48,29 @@ section .text
 addition:
     mov rax, rdi    ; On met le 1er argument dans RAX
     add rax, rsi    ; On ajoute le 2ème argument
-    ret             ; Le résultat est retourné via RAX
+    ret             ; On renvoie le résultat
 ```
 
-## Les Défis de la Division
+C'est simple, mais c'est là que l'on comprend que chaque instruction compte.
 
-La division est l'opération la plus délicate en assembleur. Avant d'utiliser `idiv`, il faut étendre le signe du registre `RAX` vers `RDX` avec l'instruction `cqo`. Sans cela, le processeur risque de déclencher une erreur de segmentation ou un résultat incohérent.
+---
 
-## Compilation et Liaison
+## Mon plus gros défi : La Division
 
-Pour faire fonctionner ce mélange de C et d'Assembleur, on utilise `nasm` pour l'assembleur et `gcc` pour lier le tout :
+La division a été l'opération la plus délicate. Avant d'utiliser l'instruction `idiv`, il faut préparer le registre `RAX` et étendre son signe vers `RDX` avec l'instruction `cqo`. Si on l'oublie, le programme plante ou donne un résultat incohérent. C'est dans ce genre de détails que l'on apprend la rigueur du bas niveau.
 
-```bash
-# Assemblage des fichiers NASM
-nasm -f elf64 addition.asm -o addition.o
+---
 
-# Compilation finale avec GCC
-gcc -fPIE main.c addition.o -no-pie -o calculator
-```
+## Ce que j'ai appris
 
-## Conclusion
+Ce projet m'a permis de démystifier le fonctionnement interne de nos ordinateurs. Passer de la logique du C à la manipulation directe des registres est une étape essentielle pour quiconque s'intéresse au **Reverse Engineering** ou à l'exploitation de vulnérabilités (comme les buffer overflows).
 
-Ce projet m'a permis de démystifier le fonctionnement interne des ordinateurs. Passer de la logique de haut niveau (C) à la manipulation directe des registres est une étape essentielle pour tout étudiant en cybersécurité souhaitant comprendre l'exploitation de vulnérabilités (comme les buffer overflows) ou le reverse engineering.
+C'est une expérience modeste, mais elle m'a donné le goût de continuer à explorer ce qui se passe "sous le capot".
+
+---
 
 Retrouvez le code complet sur mon GitHub : [simple-calculator-in-Assembly](https://github.com/jolanallen/simple-calculator-in-Assembly)
+
+---
+
+**Allen Jolan**

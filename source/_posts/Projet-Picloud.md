@@ -1,227 +1,98 @@
 ---
-title: RaspiCloud - Projet
+title: RaspiCloud - Mon aventure dans l'auto-hébergement
 date: 2024-11-21
 tags: [Cloud, Nextcloud, Raspberry]
 categories: Projets
 keywords: 'Raspberry Pi, Nextcloud, Cloud personnel, Cybersécurité, Linux, Auto-hébergement, Serveur LAMP'
-description: Guide complet pour déployer un cloud personnel sécurisé avec Nextcloud sur Raspberry Pi.
+description: Mon parcours pour déployer un cloud personnel sécurisé avec Nextcloud sur un Raspberry Pi.
 cover: /images/projects/RaspCloud/raspberry-pi-nextcloud-featured-image.jpg
 top_img: /images/cyberpunk-red.jpg
 toc: true
 toc_number: true
 ---
-# Livrables Projet Linux
 
-## Réalisé par
+# Créer son propre Cloud : Pourquoi et comment ?
+
 **Allen Jolan**  
-**B1 Cybersécurité**  
 [LinkedIn](https://www.linkedin.com/in/jolan-allen)
 
+L'idée de reprendre le contrôle de mes données m'a toujours fasciné. Plutôt que de confier tous mes fichiers à des géants du web, j'ai décidé de profiter de mes premiers pas en cybersécurité pour monter mon propre serveur à la maison. 
 
-## Introduction
+Ce projet a été mon terrain de jeu pour apprendre les bases de l'administration Linux, de la mise en réseau et, bien sûr, de la sécurisation d'un système exposé.
 
-Ce projet détaille la mise en place complète d'un **cloud personnel sécurisé** sur un Raspberry Pi. Il couvre les étapes essentielles, depuis l'installation et la configuration, jusqu'à la sécurisation avancée du système.
+## L'objectif du projet
 
-L'objectif est de :
-- Installer et configurer **Raspbian**.
-- Mettre en place un accès **SSH sécurisé**.
-- Configurer le **réseau, pare-feu et VPN**.
-- Déployer un **serveur LAMP** et **Nextcloud**.
-- Sécuriser les échanges avec un **certificat SSL/TLS**.
-
-Ce projet vise avant tout l'apprentissage et l'acquisition de compétences en **cybersécurité et administration système**.
-
----
-
-## Prérequis
-
-### Matériel recommandé :
-
-- **Raspberry Pi 4** (2Go RAM minimum) ou **Pi 5** (8Go recommandé)
-- **Alimentation** 5V 3A
-- **Carte microSD** (16Go minimum, 32Go recommandé)
-- **Connexion Internet stable**
-- **Stockage SSD externe** recommandé pour de meilleures performances
-
-Un stockage **RAID 5** peut être envisagé pour assurer la redondance des données.
+L'idée était simple sur le papier, mais riche en enseignements :
+- Apprivoiser **Linux** (Raspbian).
+- Sécuriser mes accès à distance via **SSH** et un **VPN**.
+- Comprendre le fonctionnement d'un serveur web (**LAMP**).
+- Déployer **Nextcloud** pour synchroniser mes documents.
+- Chiffrer les échanges avec **SSL/TLS**.
 
 ---
 
-## Installation de Raspbian
+## Le matériel : Faire avec les moyens du bord
 
-1. Télécharger l'image **Raspberry Pi OS** depuis le site officiel.
-2. Vérifier l'intégrité avec **SHA256** :
-   ```bash
-   sha256sum <image_raspbian.img>
-   ```
-3. Graver l'image sur la carte SD avec **Raspberry Pi Imager**.
-4. Insérer la carte SD, brancher l'alimentation et suivre l'installation.
-
----
-![Câblage du Raspberry Pi pour le projet Picloud](/images/projects/RaspCloud/t80125952.jpg)
-## Configuration de l'accès SSH
-
-1. Activer SSH via `raspi-config` ou en créant un fichier `ssh` vide sur la carte SD.
-2. Installer OpenSSH Server :
-   ```bash
-   sudo apt install openssh-server
-   ```
-3. Trouver l'adresse IP du Raspberry Pi :
-   ```bash
-   ip a
-   ```
-4. Générer et copier une clé SSH :
-   ```bash
-   ssh-keygen
-   ssh-copy-id jolan@192.168.1.X
-   ```
+Pour ce projet, j'ai utilisé un **Raspberry Pi**. C'est un outil formidable pour apprendre sans consommer trop d'énergie :
+- **Raspberry Pi 4** (2Go RAM).
+- Une simple **carte microSD** pour le système.
+- Un **SSD externe** pour stocker mes fichiers de manière plus fiable.
 
 ---
 
-## Sécurisation du Raspberry Pi
+## Mes premiers pas avec Raspbian
 
-### 1. Suppression de l’utilisateur `pi`
-   ```bash
-   sudo deluser pi --remove-home
-   ```
-### 2. Changement du port SSH
-   ```bash
-   sudo nano /etc/ssh/sshd_config
-   # Modifier 'Port 22' en 'Port 2222'
-   ```
-### 3. Installation de Fail2Ban
-   ```bash
-   sudo apt install fail2ban
-   ```
-### 4. Désactivation de l’authentification par mot de passe
-   ```bash
-   sudo nano /etc/ssh/sshd_config
-   # Modifier 'PasswordAuthentication yes' en 'PasswordAuthentication no'
-   ```
-
----
-
-## Installation physique du Raspberry Pi
-
-- Connexion filaire à la **box Internet**.
-- Attribution d'une **IP fixe** via l'interface de la box.
-
----
-
-## Configuration du réseau
-
-- Ouverture des **ports essentiels** (SSH, HTTP, HTTPS, VPN).
-- Redirection des flux vers le Raspberry Pi.
-
----
-
-## Mise en place d'un pare-feu (UFW)
-
+La première étape a été d'installer le système. Rien de très complexe, mais j'ai pris le réflexe de vérifier l'intégrité de l'image téléchargée avec un hash **SHA256**. C'est une petite habitude qui compte en sécurité :
 ```bash
-sudo apt install ufw
-sudo ufw allow 2222/tcp  # SSH sécurisé
-sudo ufw allow 1194/udp  # VPN
-sudo ufw allow 80,443/tcp  # HTTP/HTTPS
-sudo ufw default deny incoming
-sudo ufw enable
+sha256sum <image_raspbian.img>
 ```
 
 ---
 
-## Accès à distance via VPN
+## Apprendre à sécuriser l'accès
 
-Installation d'**OpenVPN** :
+C'est là que les choses sérieuses commencent. Un serveur ouvert sur internet est une cible. J'ai donc cherché à appliquer les bonnes pratiques que je découvrais :
+
+1. **Supprimer l’utilisateur par défaut (`pi`)** pour éviter les attaques par force brute évidentes.
+2. **Changer le port SSH** (passer du 22 à un port moins commun comme le 2222).
+3. **Installer Fail2Ban** : un petit outil génial qui bannit temporairement les IP qui tentent de se connecter trop de fois sans succès.
+4. **Passer aux clés SSH** : j'ai désactivé l'authentification par mot de passe pour ne plus autoriser que ma propre clé privée.
+
 ```bash
-wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh -O openvpn-install.sh
-sudo bash openvpn-install.sh
+# Désactivation du mot de passe dans /etc/ssh/sshd_config
+PasswordAuthentication no
 ```
 
 ---
 
-## Installation du serveur LAMP
+## Le réseau et le Pare-feu (UFW)
 
+Gérer les ports de ma box internet a été une étape clé. Pour protéger le Raspberry Pi, j'ai configuré **UFW** (Uncomplicated Firewall) pour ne laisser passer que le strict nécessaire :
 ```bash
-sudo apt install apache2 mariadb-server php php-mysql
+sudo ufw allow 2222/tcp  # Mon accès SSH
+sudo ufw allow 1194/udp  # Mon futur VPN
+sudo ufw allow 80,443/tcp  # Le web
+sudo ufw default deny incoming # On bloque tout le reste par défaut
 ```
 
----
-
-## Installation et configuration de Nextcloud
-
-```bash
-cd /var/www/
-wget https://download.nextcloud.com/server/releases/nextcloud.zip
-unzip nextcloud.zip
-sudo chown -R www-data:www-data nextcloud
-sudo chmod -R 755 nextcloud
-```
+Pour l'accès à distance, plutôt que d'exposer Nextcloud directement, j'ai préféré passer par un **VPN (OpenVPN)**. C'est un peu plus contraignant au quotidien, mais tellement plus sûr.
 
 ---
 
-## Sécurisation avec SSL/TLS
+## Déploiement de Nextcloud
 
-Génération d'un **certificat auto-signé** :
-```bash
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nextcloud.key -out /etc/ssl/certs/nextcloud.crt
-```
+Après avoir installé le serveur web (Apache, MariaDB, PHP), j'ai enfin pu installer Nextcloud. 
+C'est un moment gratifiant de voir l'interface s'afficher pour la première fois ! J'ai terminé par la mise en place d'un certificat **SSL/TLS** pour que mes fichiers transitent de manière chiffrée.
 
 ---
 
-## Conclusion
+## Ce que j'en retiens
 
-Ce projet a permis d’acquérir des compétences en :
-
-- **Administration Linux et réseau**
-- **Cybersécurité et protection des systèmes**
-- **Déploiement d'un cloud personnel sécurisé**
-
----
-
-## Sources
-
-- [Installation d’un VPN sur Raspberry Pi](https://raspberrytips.fr/installer-serveur-vpn-raspberry-pi/)
+Ce projet n'était pas seulement une installation technique, c'était ma porte d'entrée dans le monde de l'administration système. J'ai appris que :
+- La sécurité est un processus constant, pas une option qu'on coche.
+- On apprend énormément en faisant des erreurs de configuration (et il y en a eu !).
+- L'auto-hébergement demande de la rigueur, mais la satisfaction de posséder ses propres services est immense.
 
 ---
 
-**Allen Jolan - B1 Cybersécurité**
-
----
-
-## Installation et configuration de Nextcloud
-
-```bash
-cd /var/www/
-wget https://download.nextcloud.com/server/releases/nextcloud.zip
-unzip nextcloud.zip
-sudo chown -R www-data:www-data nextcloud
-sudo chmod -R 755 nextcloud
-```
-
----
-
-## Sécurisation avec SSL/TLS
-
-Génération d'un **certificat auto-signé** :
-```bash
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nextcloud.key -out /etc/ssl/certs/nextcloud.crt
-```
-
----
-
-## Conclusion
-
-Ce projet a permis d’acquérir des compétences en :
-
-- **Administration Linux et réseau**
-- **Cybersécurité et protection des systèmes**
-- **Déploiement d'un cloud personnel sécurisé**
-
----
-
-## Sources
-
-- [Installation d’un VPN sur Raspberry Pi](https://raspberrytips.fr/installer-serveur-vpn-raspberry-pi/)
-
----
-
-**Allen Jolan - B1 Cybersécurité**
+**Allen Jolan**

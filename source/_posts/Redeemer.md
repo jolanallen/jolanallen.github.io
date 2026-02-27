@@ -4,87 +4,52 @@ date: 2025-03-05
 tags: [HackTheBox, Redis, DataBases, VeryEasy]
 categories: writeups
 keywords: 'Hack The Box, Redeemer, Redis, Writeup, Cybersécurité, Pentest, redis-cli'
-description: Guide pour exploiter un service Redis non sécurisé sur la machine Redeemer de Hack The Box.
+description: Ma découverte des bases de données Redis à travers la machine Redeemer de Hack The Box.
 cover: images/writeups/REDEEMER/image.png
 top_img: /images/cyberpunk-red.jpg
 toc: true
 toc_number: true
 ---
-## Introduction
 
-Le challenge **"Redeemer"** sur Hack The Box nous amène à interagir avec un service Redis sur un serveur à distance. Redis est un **système de gestion de base de données en mémoire**, utilisé principalement pour la mise en cache de données et la gestion de données temporaires. L'objectif de ce challenge est d'exploiter un serveur Redis pour obtenir un flag.
+# Apprendre à manipuler Redis : La machine Redeemer
 
-## Étape 1: Identifier le Port Ouvert
+Après avoir exploré le protocole SMB, j'ai continué ma progression sur **Hack The Box** avec la machine **Redeemer**. Cette fois, l'objectif était d'interagir avec un service que je ne connaissais que de nom : **Redis**.
 
-La première étape consiste à déterminer quel port est ouvert sur la machine cible. Nous avons utilisé **Nmap** pour scanner les ports :
+### Qu'est-ce que Redis ?
 
-```bash
-┌──(jolan㉿jolan)-[~]
-└─$ nmap -p- -sS -min-rate=10000 -T5 10.129.136.187
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-11 11:21 CET
-Warning: 10.129.136.187 giving up on port because retransmission cap hit (2).
-Nmap scan report for 10.129.136.187
-Host is up (0.026s latency).
-Not shown: 63528 closed tcp ports (reset), 2006 filtered tcp ports (no-response)
-PORT     STATE SERVICE
-6379/tcp open  redis
+Redis est un système de gestion de base de données "en mémoire". Contrairement aux bases de données classiques qui écrivent tout sur le disque, Redis stocke les données en RAM pour être extrêmement rapide. C'est très utilisé pour la mise en cache.
 
-Nmap done: 1 IP address (1 host up) scanned in 7.20 seconds
+L'intérêt pour moi, en tant qu'apprenti en cybersécurité, est de voir ce qui se passe quand un tel service est laissé accessible sans mot de passe.
 
-```
+---
 
-Le scan a révélé que le port **6379** est ouvert, et le service qui l'occupe est **Redis**.
+### Étape 1 : Le scan de reconnaissance
 
-### Étape 2: Identifier le Service Redis
-
-Une fois que le port est identifié, nous avons effectué un autre scan Nmap pour obtenir plus d'informations sur le service qui s'exécute sur ce port. Le résultat indique que Redis est bien en fonctionnement :
+Comme toujours, tout commence par un scan avec **Nmap**. J'ai cherché quel port était ouvert sur la machine cible :
 
 ```bash
-┌──(jolan㉿jolan)-[~]
-└─$ nmap -p 6379 -sV 10.129.136.187
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-11 11:24 CET
-Nmap scan report for 10.129.136.187
-Host is up (0.033s latency).
-
-PORT     STATE SERVICE VERSION
-6379/tcp open  redis   Redis key-value store 5.0.7
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 6.53 seconds
-
+nmap -p- -sS -min-rate=10000 -T5 10.129.136.187
 ```
 
-Il est confirmé que **Redis version 5.0.7** est en cours d'exécution sur le port 6379.
+Le scan a révélé que le port **6379** était ouvert. C'est le port par défaut de **Redis**.
 
-### Étape 3: Comprendre Redis
+---
 
-Redis est un **système de gestion de base de données en mémoire** utilisé principalement pour le **stockage de données temporaires** et la **mise en cache**. Il permet de stocker des paires clé-valeur et peut être utilisé pour partager des données entre plusieurs serveurs.
+### Étape 2 : Se connecter au service
 
-### Étape 4: Se Connecter à Redis
-
-Pour interagir avec Redis, l'outil **redis-cli** est utilisé. Il permet d'exécuter des commandes Redis depuis la ligne de commande. La commande suivante permet de se connecter à la machine cible via **redis-cli** :
+Pour parler à un serveur Redis, on utilise l'outil **redis-cli**. J'ai tenté une connexion directe vers l'IP cible :
 
 ```bash
 redis-cli -h 10.129.136.187
-
 ```
 
-Une fois connecté, vous obtenez un prompt où vous pouvez exécuter des commandes Redis.
+À ce moment-là, j'attendais une demande de mot de passe... mais rien. J'étais directement connecté au prompt du serveur. C'est une erreur de configuration classique, mais aux conséquences lourdes.
 
-### Étape 5: Obtenir des Informations sur le Serveur Redis
+---
 
-La commande suivante fournit des informations et des statistiques sur le serveur Redis :
+### Étape 3 : Fouiller dans la base de données
 
-```bash
-10.129.136.187:6379> info
-
-```
-
-Le résultat montre diverses informations sur le serveur, y compris la version de Redis, l'OS utilisé, et le nombre de clés dans la base de données.
-
-### Étape 6: Explorer les Clés de Redis
-
-Ensuite, nous avons utilisé la commande `keys *` pour lister toutes les clés stockées dans la base de données Redis :
+Une fois à l'intérieur, j'ai voulu voir quelles "clés" (les noms des données stockées) étaient présentes. J'ai utilisé la commande `keys *` :
 
 ```bash
 10.129.136.187:6379> keys *
@@ -92,39 +57,34 @@ Ensuite, nous avons utilisé la commande `keys *` pour lister toutes les clés s
 2) "numb"
 3) "stor"
 4) "flag"
-
 ```
 
-Quatre clés sont présentes : **temp**, **numb**, **stor**, et **flag**.
+Quatre clés sont apparues, dont une nommée **flag**. C'était presque trop facile !
 
-### Étape 7: Extraire les Valeurs des Clés
+---
 
-Nous avons ensuite utilisé la commande `get` pour récupérer les valeurs associées à ces clés :
+### Étape 4 : Récupérer le contenu
+
+Pour lire la valeur d'une clé, on utilise la commande `get` :
 
 ```bash
-10.129.136.187:6379> get temp
-"1c98492cd337252698d0c5f631dfb7ae"
-
-10.129.136.187:6379> get numb
-"bb2c8a7506ee45cc981eb88bb81dddab"
-
-10.129.136.187:6379> get stor
-"e80d635f95686148284526e1980740f8"
-
 10.129.136.187:6379> get flag
 "03e1d2b376c37ab3f5319922053953eb"
-
 ```
 
-La valeur de la clé **flag** est le flag que nous recherchions :
+Et voilà, le flag était là, exposé en clair.
 
-```
-03e1d2b376c37ab3f5319922053953eb
+---
 
-```
+### Conclusion et réflexion
 
-# Conclusion
+Cette expérience sur la machine **Redeemer** a été très instructive. Elle m'a montré qu'un outil aussi puissant que Redis peut devenir un maillon faible s'il n'est pas correctement configuré. 
 
-Dans ce challenge, nous avons utilisé **Nmap** pour découvrir le port ouvert, identifié le service **Redis** qui y était exécuté, et utilisé **redis-cli** pour interagir avec le serveur Redis. En explorant les clés stockées dans Redis, nous avons récupéré le **flag** qui était caché dans la clé **flag**.
+Ce que j'ai appris :
+- Ne jamais laisser un service de base de données accessible sur le réseau sans authentification.
+- Le port 6379 est un bon indicateur de la présence de Redis lors d'un audit.
+- La simplicité de certains outils (comme redis-cli) rend l'exploitation très rapide si la porte est restée ouverte.
 
-Ce challenge met en lumière l'importance de sécuriser les services Redis, car un accès non autorisé à Redis peut permettre à un attaquant d'exploiter des informations sensibles stockées dans la base de données.
+---
+
+**Allen Jolan**

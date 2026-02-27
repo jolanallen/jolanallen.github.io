@@ -1,54 +1,73 @@
 ---
-title: WMR - Centraliser et opérationnaliser le Pentest Web via des MindMaps
+title: WMR - Ma méthode pour organiser mes connaissances en Pentest Web
 date: 2025-12-02
 tags: [Pentest Web, WMR, MindMap, Sécurité Offensive, Méthodologie]
 categories: Projets
 keywords: 'WMR, Web-MindMap-Recipes, Pentest Web, MindMap Pentest, Méthodologie Sécurité, Hacking Éthique, Checklist Pentest, ThePrintor'
-description: Présentation de WMR (Web-MindMap-Recipes), un projet visant à centraliser les techniques de pentest web pour optimiser le temps d'analyse et garantir une couverture exhaustive des tests.
+description: Comment je centralise les techniques de pentest web dans des MindMaps pour ne rien oublier lors de mes audits.
 cover: /images/projects/WMR/WMR.png
 top_img: /images/projects/WMR/WMR.png
 toc: true
 ---
 
-Le pentest web est un domaine en constante évolution où la quantité d'informations à maîtriser est colossale. Entre les vulnérabilités classiques de l'OWASP Top 10 et les techniques d'exploitation les plus récentes, le risque d'oublier une étape cruciale lors d'un audit est réel. 
+# WMR : Ne plus se perdre dans l'immensité du Pentest Web
 
-C'est pour répondre à ce besoin de structure et d'efficacité que je développe **WMR (Web-MindMap-Recipes)**. Inspiré par la célèbre mindmap de pentest d'Orange Cyberdefense, ce projet se concentre exclusivement sur l'écosystème web.
+**Allen Jolan**  
+[LinkedIn](https://www.linkedin.com/in/jolan-allen)
 
-## Le concept de WMR : des "Recettes" pour le Pentest
+Le pentest web est un domaine passionnant mais colossal. Entre les vulnérabilités classiques de l'OWASP Top 10 et les nouvelles techniques d'exploitation qui sortent chaque jour, il est facile d'oublier une étape cruciale lors d'un audit. 
 
-L'objectif de WMR n'est pas seulement de lister des vulnérabilités, mais d'offrir un véritable flux de travail opérationnel. Chaque branche de la mindmap est pensée comme une "recette" associant :
-- Une étape méthodologique (Reconnaissance, Authentification, Injection, etc.).
-- Des payloads spécifiques et testés.
-- Les commandes d'outils associées (Burp Suite, Gobuster, SQLMap, etc.).
-- Le contexte d'application pour éviter les tests inutiles.
+Pour y remédier, j'ai commencé à développer **WMR (Web-MindMap-Recipes)**. Ce n'est pas un outil miracle, mais une méthode personnelle pour centraliser tout ce que j'apprends et m'assurer que mes tests sont aussi exhaustifs que possible.
 
-## Pourquoi centraliser via une MindMap ?
+---
 
-La structure en MindMap offre plusieurs avantages majeurs par rapport à une simple documentation textuelle :
+## Le concept de WMR : Mes "Recettes" de Cuisine
 
-1.  **Vision globale et granulaire** : On peut visualiser l'ensemble de la surface d'attaque d'un seul coup d'œil, tout en zoomant sur des points très précis.
-2.  **Rapidité d'exécution** : En phase d'audit, le temps est compté. Avoir ses "recettes" prêtes à l'emploi permet de se concentrer sur l'analyse plutôt que sur la recherche de la bonne syntaxe.
-3.  **Réduction de la charge mentale** : En suivant un cheminement logique, on garantit qu'aucune vérification n'est omise, assurant ainsi une couverture exhaustive du périmètre.
+L'idée derrière WMR est simple : chaque branche de la MindMap est pensée comme une "recette". J'y associe :
+- **Une étape méthodologique** (Reconnaissance, Authentification, Injection, etc.).
+- **Des payloads spécifiques** que j'ai testés et validés.
+- **Les commandes d'outils** (Burp Suite, Gobuster, SQLMap, etc.) pour ne plus avoir à chercher la syntaxe exacte en plein audit.
+- **Le contexte** : Quand faut-il utiliser ce test ? Et quand est-il inutile ?
 
-## Stratégie d'opérationnalisation
+---
 
-Pour que WMR devienne un compagnon de route quotidien, je travaille sur l'intégration des concepts suivants :
+## Pourquoi utiliser une MindMap ?
+
+J'ai choisi le format visuel de la MindMap pour plusieurs raisons qui m'aident au quotidien :
+
+1. **Une vision globale** : Je peux voir toute la surface d'attaque d'un seul coup d'œil, tout en zoomant sur un point très précis.
+2. **Moins de charge mentale** : En suivant mon cheminement logique, je sais exactement où j'en suis et ce qu'il me reste à tester. Ça me permet de rester concentré sur l'analyse plutôt que sur la structure du test.
+3. **Rapidité** : Avoir mes commandes prêtes à l'emploi me fait gagner un temps précieux en phase d'audit.
+
+---
+
+## Ma stratégie d'organisation
+
+Je travaille actuellement sur l'intégration de plusieurs piliers dans mon flux de travail :
 
 ### La segmentation par vecteurs d'attaque
-Chaque grand domaine du web est découpé pour refléter la réalité d'un audit :
-- **Reconnaissance & Énumération** : Découverte de sous-domaines, identification des technos (Wappalyzer, fingerprinting).
-- **Gestion des accès** : Analyse des mécanismes d'authentification, gestion des sessions, JWT, et contrôle d'accès (IDOR).
-- **Exploitation de la logique métier** : Tests sur les workflows spécifiques à l'application.
-- **Injections & Client-Side** : XSS, SQLi, SSRF, XXE, et contournements de WAF.
+J'ai découpé chaque grand domaine du web pour refléter la réalité d'un audit :
+- **Reconnaissance** : Découverte de sous-domaines, identification des technos.
+- **Gestion des accès** : Analyse de l'authentification, des sessions, JWT et IDOR.
+- **Logique métier** : Comprendre comment l'application fonctionne "normalement" pour mieux la détourner.
+- **Injections** : XSS, SQLi, SSRF, XXE et contournements de WAF.
 
-### Un outil vivant sous Obsidian
-WMR est conçu sous **Obsidian**, exploitant la puissance du maillage interne (liens bi-directionnels) pour naviguer entre les vecteurs d'attaque. Actuellement en phase de développement privé pour affiner les "recettes" et la structure, le projet a vocation à être partagé avec la communauté.
+---
 
-**Sortie Open-Source prévue : Fin 2026.**
+### Un projet vivant sous Obsidian
+
+Pour faire vivre WMR, j'utilise **Obsidian**. La puissance des liens entre mes notes me permet de naviguer facilement d'une technique à une autre. Pour le moment, c'est un projet personnel que j'affine chaque jour, mais j'espère pouvoir le partager avec la communauté une fois qu'il sera suffisamment mûr.
+
+**Sortie prévue : Fin 2026.**
 
 ---
 
 ### Conclusion
-WMR - Web-MindMap-Recipes est ma réponse au besoin de rigueur imposé par la cybersécurité moderne. En centralisant l'expertise web dans un format visuel et actionnable, je cherche à transformer la complexité du pentest en un processus fluide et systématique.
 
-Restez à l'écoute pour la sortie officielle, ou contactez-moi sur LinkedIn pour échanger sur vos méthodologies de pentest !
+WMR est ma réponse au besoin de rigueur qu'impose la cybersécurité. En centralisant mon expertise web dans un format visuel, je cherche simplement à transformer la complexité du pentest en un processus fluide et structuré. 
+
+N'hésitez pas à me suivre sur LinkedIn pour échanger sur vos propres méthodologies !
+
+---
+
+**Allen Jolan**
