@@ -337,7 +337,7 @@ rightside_item_order:
 # Math (數學)
 # --------------------------------------
 # About the per_page
-# if you set it to true, it will load mathjax/katex script in each page (true 表示每一頁都加���js)
+# if you set it to true, it will load mathjax/katex script in each page (true 表示每一頁都加�����js)
 # if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' in page's front-matter)
 # (false 需要時加載，須在使用的 Markdown Front-matter 加上 mathjax: true)
 
@@ -570,6 +570,11 @@ cloudflare_analytics:
 # Microsoft Clarity
 # https://clarity.microsoft.com/
 microsoft_clarity:
+
+# Vercel Web Analytics
+# https://vercel.com/docs/analytics
+# Enable this after deploying to Vercel and enabling Web Analytics in your project settings
+vercel_analytics: false
 
 # Advertisement
 # --------------------------------------
@@ -874,7 +879,7 @@ snackbar:
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
-# prefetch (預加載)
+# prefetch (預��載)
 instantpage: false
 
 # https://github.com/vinta/pangu.js
