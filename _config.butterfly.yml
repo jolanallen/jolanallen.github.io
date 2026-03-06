@@ -574,7 +574,7 @@ microsoft_clarity:
 # Vercel Web Analytics
 # https://vercel.com/docs/analytics
 # Enable this after deploying to Vercel and enabling Web Analytics in your project settings
-vercel_analytics: false
+vercel_analytics: true
 
 # Advertisement
 # --------------------------------------
