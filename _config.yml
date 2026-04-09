@@ -13,7 +13,7 @@ timezone: Europe/Paris
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.kustodes.me
+url: https://www.theprintor-homelab.fr.eu.org
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -89,8 +89,8 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
+include: []
+exclude: []
 ignore:
 
 # Extensions
@@ -110,7 +110,7 @@ seo:
   type: 'Person'
   title: 'Jolan Allen (ThePrintor) - Portfolio Cybersécurité'
   description: 'Jolan Allen (ThePrintor) - Portfolio en cybersécurité, pentest et administration système. Projets, write-ups et expertise technique.'
-  url: 'https://www.kustodes.me'
+  url: 'https://www.theprintor-homelab.fr.eu.org'
   author: 'Jolan Allen'
   twitter_card: true
-  keywords: 'Jolan Allen, ThePrintor, Kustodes, Cybersécurité, Pentest, GRC, Portfolio, Blog, Hacking'
+  keywords: 'Jolan Allen, ThePrintor, Cybersécurité, Pentest, GRC, Portfolio, Blog, Hacking'
