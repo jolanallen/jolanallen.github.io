@@ -187,7 +187,9 @@ class LocalSearch {
         // Only match articles with non-empty titles
         this.datas = this.datas.filter(data => data.title).map(data => {
           data.title = data.title.trim()
-          data.content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : ''
+          data.content = data.content
+            ? new DOMParser().parseFromString(data.content.trim(), 'text/html').body.textContent || ''
+            : ''
           data.url = decodeURIComponent(data.url).replace(/\/{2,}/g, '/')
           return data
         })
