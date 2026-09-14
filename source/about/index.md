@@ -46,17 +46,11 @@ Je m'appelle **Jolan Allen**, alias **ThePrintor**. Actuellement en **Bachelor 2
 
 ###  Mon Curriculum Vitae
 
-Pour plus de détails sur mon parcours, vous pouvez consulter ou télécharger mon CV complet ci-dessous :
-
-<div style="text-align: center; margin-top: 20px;">
-  <a href="/pdf/Allen_Jolan_cv_alternance.pdf" class="btn-download" target="_blank" style="background: #4a7dbe; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-    <i class="fas fa-file-pdf"></i> Télécharger mon CV (PDF)
-  </a>
+<!-- TODO: Réactiver le lien vers le CV dès qu'un nouveau PDF sera disponible -->
+<!-- <a href="/pdf/Allen_Jolan_cv_alternance.pdf" class="btn-download" ...> -->
+<div style="text-align: center; margin-top: 20px; padding: 15px 20px; background: #2a2a2a; border-radius: 5px; color: #999;">
+  <i class="fas fa-clock"></i> CV bientôt disponible — mise à jour en cours
 </div>
-
-<br>
-
-[![Aperçu du CV de Jolan Allen](/images/AboutOfMe/CV.jpg)](/pdf/Allen_Jolan_cv_alternance.pdf)
 
 ---
 
