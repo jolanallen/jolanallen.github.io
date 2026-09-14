@@ -156,6 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return height
     }
 
+    const escapeHTML = str => String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+
     const createEle = (lang, item) => {
       const fragment = document.createDocumentFragment()
 
@@ -193,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         langName = item.getAttribute('class').split(' ')[1]
         if (langName === 'plain' || langName === undefined) langName = 'Code'
       }
-      createEle(`<div class="code-lang">${langName}</div>`, item)
+      createEle(`<div class="code-lang">${escapeHTML(langName)}</div>`, item)
     })
   }
 
